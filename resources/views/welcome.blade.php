@@ -1,3 +1,10 @@
 <x-layout>
-    <h1>Testo di prova</h1>
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="mt-4">
+                <h1>Benvenuto {{ auth()->user()->name }}</h1>
+            </div>
+        </div>
+    </div>
+   
 </x-layout>

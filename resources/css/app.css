@@ -1,2 +1,9 @@
-@import 'bootstrap'
+@import 'bootstrap';
 
+body {
+margin: 0;
+}
+
+.uppercased {
+    text-transform: uppercase;
+}
