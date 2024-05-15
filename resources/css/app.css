@@ -1,9 +1,126 @@
 @import 'bootstrap';
 
+
+[data-theme='dark']{
+    --color: transparent ;
+    --color-background:#000000;
+    --text-color:white;
+    --btn-color:white;
+    --btn-text:black;
+}
+[data-theme='light']{
+    --color: transparent ;
+    --color-background:white;
+    --text-color:black;
+    --btn-color:black;
+    --btn-text:white;
+}
+
+[data-theme='dark'] .dark{
+    display: none;
+}
+
+[data-theme='light'] .light{
+    display: none;
+}
+[data-theme='light'] .dark{
+    display: block;
+}
+
+.text-classic {
+    color: var(--text-color);
+}
+
+.bg-transparent{
+    background-color: var(--color) !important;
+}
+.bg-drop {
+    background-color: var(--color-background);
+    color: var(--text-color);
+}
+
+.dropdown-btn{
+    text-decoration: none;
+    border: none;
+    background-color: var(--color);
+}
+
+.dropdown-element{
+    text-decoration: none;
+}
+
+.dropdown-element:hover {
+    opacity: 0.5;
+}
+
+nav{
+    background-color: var(--color);
+    color: var(--text-color) !important;
+}
+
+nav ul li a  {
+    color: var(--text-color) !important;
+}
+
+body {
+    background-color: var(--color-background);
+    height: 2000px;
+ }
+
+.hover:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+body {
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    text-transform: uppercase;
+    color: var(--text-color) !important;
+  }
+
+nav {
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    text-transform: uppercase;
+
+}
+
+.btn-custom {
+    --size1:1.9%;
+    --size2:8%;
+    padding-top: var(--size1);
+    padding-bottom: var(--size1);
+    padding-left: var(--size1);
+    padding-right: var(--size2);
+    border-radius: 10px;
+    border: none;
+    background-color: var(--btn-color);
+    color: var(--btn-text);
+    text-transform: uppercase;
+
+}
+
+.btn-custom:hover {
+    opacity: 0.7;
+}
+
 body {
     margin: 0;
 }
 
 .uppercased {
     text-transform: uppercase;
+}
+
+.position-light{
+    padding-top:14px;
+}
+
+.position-dark{
+    padding-top:12px;
 }
