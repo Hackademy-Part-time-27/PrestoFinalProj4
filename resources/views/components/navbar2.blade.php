@@ -7,14 +7,11 @@
     <div class="collapse navbar-collapse justify-content-around" id="navbarNavDropdown">
         <h3>{{ config('app.name') }}</h3>
         <ul class="navbar-nav fs-4 w-25">
-            <li class="nav-item me-3">
+            <li class="nav-item me-4">
             <a class="nav-link hover" aria-current="page" href="{{ route('welcome') }}">Home</a>
             </li>
-            <li class="nav-item me-3">
-            <a class="nav-link hover" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link hover" href="#">Pricing</a>
+            <li class="nav-item me-4">
+            <a class="nav-link hover" href="#">Annunci</a>
             </li>
         </ul>
         <ul class="navbar-nav justify-content-end align-items-center w-25 fs-4 ">
@@ -37,7 +34,7 @@
                     </ul>
             </li>
             @else
-            <li class="nav-item">
+            <li class="nav-item me-4">
                 <a class="nav-link hover" href="/register">Registrati</a>
             </li>
             <li class="nav-item">
