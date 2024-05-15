@@ -28,7 +28,7 @@
                             @error('password_confirmation') <span class="small text-danger">{{ $message }}</span> @enderror
                         </div>
                         <div class="mt-3">
-                            <button class="btn btn-primary " type="submit">Register</button>
+                            <button class="btn-custom " type="submit">Register</button>
                         </div>
                     </form>
                 </div>
