@@ -2,8 +2,10 @@
 
 namespace App\Livewire;
 
-use Livewire\Component;
+
 use Livewire\Attributes\Validate;
+use Livewire\Component;
+
 
 class CreateAnnouncement extends Component
 { 
