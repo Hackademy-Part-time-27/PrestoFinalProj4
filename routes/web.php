@@ -4,10 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\FrontController;
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+Route::get('/',[FrontController::class,'welcome'])->name('welcome');
 
 Route::get('/user/index',[UserController::class,'index'])->name('user.index');
 

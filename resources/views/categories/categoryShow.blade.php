@@ -14,7 +14,7 @@
 </div>
 <div class="container mt-4">
            <div class="row">
-                @foreach($announcements as $announcement)
+                @forelse($category->announcements as $announcement)
                 <div class="col-sm">
                         <div class="card" style="width: 18rem;">
                             <img class="w-50 img-fluid m-3" src="https://picsum.photos/id/1/200/300" class="card-img-top p-3 rounded" alt="...">
@@ -28,7 +28,14 @@
                         </div>
                     </div>
            </div>
-           @endforeach
+           @empty
+           <div>
+                  <p>Non sono presenti annunci per questa categoria</p>
+               
+                  <p>Pubblicane uno : <a class="btn-custom text-decoration-none" href="{{route('announcement.create')}}">Crea annuncio  </a> </p>
+                 
+           </div>
+           @endforelse
                 </div>
              
                  </div>
