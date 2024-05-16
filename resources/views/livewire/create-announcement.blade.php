@@ -13,9 +13,9 @@
                     </div>
                     <div class="mb-3">
                         <label for="category_id" class="form-label">Categoria</label>
-                        <select name="categoy_id" wire:model="category_id" class="form-control" >
+                        <select name="categoy_id" wire:model="category_id" class="form-control fs-4" >
                             @foreach($categories as $category)
-                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                <option class="fs-5" value="{{ $category->id }}">{{ $category->name }}</option>
                             @endforeach
                         </select>
                     </div>

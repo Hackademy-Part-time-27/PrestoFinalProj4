@@ -1,17 +1,24 @@
-<nav class="navbar navbar-expand-lg ">
+<nav class="navbar navbar-expand-lg border-bttm">
   <div class="container-fluid">
-    
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-around" id="navbarNavDropdown">
-        <h3>{{ config('app.name') }}</h3>
-        <ul class="navbar-nav fs-4 w-25">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+    <div class="collapse navbar-collapse justify-content-between " id="navbarNavDropdown">
+       
+        <ul class="navbar-nav fs-4 w-25 align-items-center align-content-center">
+            <li class="nav-item me-5 text-3 fs-3">{{ config('app.name') }}</li>
             <li class="nav-item me-4">
             <a class="nav-link hover" aria-current="page" href="{{ route('welcome') }}">Home</a>
             </li>
-            <li class="nav-item me-4">
-            <a class="nav-link hover" href="{{ route('announcement.create') }}">Annunci</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categorie
+                </a>
+                    <ul class="dropdown-menu dropdown-menu-end uppercased bg-drop m-0 px-3 fs-5">
+                        @foreach($categories as $category)
+                        <li><a class="dropdown-element" href="">{{ $category->name }}</a></li>
+                        @endforeach
+                    </ul>
             </li>
         </ul>
         <ul class="navbar-nav justify-content-end align-items-center w-25 fs-4 ">
@@ -36,7 +43,7 @@
             </li>
             @else
             <li class="nav-item me-4">
-                <a class="nav-link hover" href="/register">Registrati</a>
+                <a class="nav-link hover text-3 " href="/register">Registrati</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link hover" href="/login">Login</a>

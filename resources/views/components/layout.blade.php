@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,10 +14,11 @@
 <body>
     <x-navbar2/>
 
-    <div class="container">
+    <div>
         {{ $slot }}
     </div>
     
+    <x-footer/>
 <script>
 
     function changeMode(){
