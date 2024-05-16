@@ -12,7 +12,9 @@ class CreateAnnouncement extends Component
     #[Validate]
     public $body;
     #[Validate]
+    
     public $price;
+
  
     public function render()
     {
