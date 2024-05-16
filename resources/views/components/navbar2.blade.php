@@ -11,7 +11,7 @@
             <a class="nav-link hover" aria-current="page" href="{{ route('welcome') }}">Home</a>
             </li>
             <li class="nav-item me-4">
-            <a class="nav-link hover" href="#">Annunci</a>
+            <a class="nav-link hover" href="{{ route('announcement.create') }}">Annunci</a>
             </li>
         </ul>
         <ul class="navbar-nav justify-content-end align-items-center w-25 fs-4 ">
@@ -31,6 +31,7 @@
                         </li>
                         <li><a class="dropdown-element" href="{{ route('category.create') }}">Crea Categoria</a></li>
                         <li><a class="dropdown-element" href="{{ route('category.index')}}">Categorie</a></li>
+                        <li><a class="dropdown-element" href="{{ route('announcement.create')}}">Crea Annuncio</a></li>
                     </ul>
             </li>
             @else

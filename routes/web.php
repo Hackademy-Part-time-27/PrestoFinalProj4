@@ -13,4 +13,4 @@ Route::get('/user/index',[UserController::class,'index'])->name('user.index');
 
 Route::resource('/category', CategoryController::class)->middleware('auth');
 
-Route::get('create/announcement',[AnnouncementController::class,'create'])->name('announcement.create')->middleware('auth');
+Route::get('/create/announcement',[AnnouncementController::class,'create'])->name('announcement.create')->middleware('auth');
