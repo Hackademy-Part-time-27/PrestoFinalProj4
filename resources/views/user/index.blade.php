@@ -6,7 +6,7 @@
             </div>
             @auth
             <div class="mt-4">
-                <button class="btn-custom">Crea Annuncio</button>
+                <a class="btn-custom text-decoration-none" href="{{ route('announcement.create') }}">Crea Annuncio</a>
             </div>
             @endauth
         </div>

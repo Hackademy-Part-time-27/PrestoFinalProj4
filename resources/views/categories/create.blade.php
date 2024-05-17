@@ -1,6 +1,6 @@
 <x-layout>
     <div class="row">
-        <div class="col-md-6 mx-auto">
+        <div class="col-md-6 mx-auto fs-4">
             <div class="my-4">
                 <h1>Crea una nuova Categoria</h1>
                 <x-success/>
