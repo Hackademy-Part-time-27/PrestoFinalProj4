@@ -16,6 +16,7 @@
                                     <img class="img-fluid rounded-1 m-3" src="https://picsum.photos/id/1/200/300" class="card-img-top p-3 rounded" alt="...">
                                 <div class="card-body">
                                     <h3 class="card-title text-3">{{$announcement->title}}</h3>
+                                    <p class="card-text fs-4 text-danger ">{{ $announcement->category->name}} </p>
                                     <p class="card-text fs-5">{{$announcement->body}}</p>
                                     <p class="card-text fs-4 text-danger ">{{Number::currency($announcement->price, in: 'EUR', locale: 'de')}}</p>
                                     <div class="my-4">
