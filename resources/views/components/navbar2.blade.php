@@ -20,7 +20,7 @@
       
                     <ul class="dropdown-menu dropdown-menu-end uppercased bg-drop m-0 px-3 fs-5">
                         @foreach($categories as $category)
-                        <li><a class="dropdown-element" href="">{{ $category->name }}</a></li>
+                        <li><a class="dropdown-element" href="{{ route('announcementes.category-filter', $category ) }}">{{ $category->name }}</a></li>
                         @endforeach
                     </ul>
             </li>

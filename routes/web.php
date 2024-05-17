@@ -9,6 +9,8 @@ use App\Http\Controllers\ContactController;
 
 Route::get('/',[FrontController::class,'welcome'])->name('welcome');
 
+Route::get('/announcements/{category}', [FrontController::class , 'indexForCategory'])->name('announcementes.category-filter');
+
 Route::get('/user/index',[UserController::class,'index'])->name('user.index');
 
 Route::resource('/category', CategoryController::class)->middleware('auth');

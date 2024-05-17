@@ -131,7 +131,7 @@ nav {
 }
 
 .btn-custom {
-    --size1: 1.9%;
+    --size1: 1%;
     --size2: 8%;
     padding-top: var(--size1);
     padding-bottom: var(--size1);
@@ -143,6 +143,8 @@ nav {
     color: var(--color-bg-2);
     text-transform: uppercase;
     font-weight: 700;
+    max-width: fit-content;
+    max-height: fit-content;
 
 }
 
@@ -193,7 +195,7 @@ nav {
     padding-left: 4%;
     padding-bottom: 5%;
     border: 1px solid var(--alpha-color);
-    box-shadow: 0px 4px 23px var(--alpha-color);
+    /*box-shadow: 0px 4px 23px var(--alpha-color);*/
 
 
 }

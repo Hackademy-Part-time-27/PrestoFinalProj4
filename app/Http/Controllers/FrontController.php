@@ -24,4 +24,14 @@ public function categoryShow(Category $category){
 
 }
 
+public function indexForCategory(Category $category)
+{
+    $announcements=$category->announcements;
+
+    return view('announcement.categoriesView',[
+        'category'=>$category,
+        'announcements'=>$announcements,
+    ]);
+}
+
 }
