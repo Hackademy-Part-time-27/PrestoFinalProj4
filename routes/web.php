@@ -20,3 +20,5 @@ Route::get('/create/announcement',[AnnouncementController::class,'create'])->nam
 Route::get('/contatti', [ContactController::class, 'viewForm'])->name('contacts');
 
 Route::post('/contatti/send', [ContactController::class, 'send'])->name('contacts.send');
+
+Route::get('/dettaglio/annuncio/{announcement}', [AnnouncementController::class, 'showAnnouncement'])->name('announcements.show');
