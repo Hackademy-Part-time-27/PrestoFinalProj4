@@ -11,6 +11,7 @@
     --btn-color: white;
     --btn-text: black;
     --alpha-color: #9BB4CA80;
+    --alpha-color-2:#4D579dff;
 }
 
 [data-theme='light'] {
@@ -24,6 +25,7 @@
     --btn-color: black;
     --btn-text: white;
     --alpha-color: #091E427D;
+    --alpha-color-2:rgba(77, 86, 157, 0.541);
 }
 
 [data-theme='dark'] .dark {
@@ -209,4 +211,11 @@ nav {
     background-color: var(--color-bg-2);
     margin-top: 10%;
     min-height: 300px;
+}
+
+.revision-element{
+    border: solid 3px var(--text-color-3);
+    border-radius: 4px;
+    background-color: var(--alpha-color-2) ;
+
 }

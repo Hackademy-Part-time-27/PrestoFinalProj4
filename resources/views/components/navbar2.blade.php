@@ -8,11 +8,20 @@
         <ul class="navbar-nav fs-4 w-25 align-items-center align-content-center">
             <li class="nav-item me-5 text-3 fs-3">{{ config('app.name') }}</li>
             <li class="nav-item me-4">
-            <a class="nav-link hover" aria-current="page" href="{{ route('welcome') }}">Home</a>
+                <a class="nav-link hover" aria-current="page" href="{{ route('welcome') }}">Home</a>
             </li>
-            <li class="nav-item">
-          <a class="nav-link hover" href="{{ route('contacts') }}">Contattaci</a>
-        </li>
+            <li class="nav-item me-4">
+                <a class="nav-link hover" href="{{ route('contacts') }}">Contattaci</a>
+            </li>
+            @if(auth()->user()->is_revisor)
+                <li class="nav-item me-4 @if(App\Models\Announcement::toBeRevisionedCount()!=0)revision-element @endif position-relative">
+                    <a href="{{ route('revisor.index') }}" class="nav-link hover">Revisiona</a>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger mt-2">
+                        {{App\Models\Announcement::toBeRevisionedCount()}}
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                </li>
+            @endif    
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle hover " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Categorie

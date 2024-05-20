@@ -6,6 +6,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\RevisorController;
+
 
 Route::get('/',[FrontController::class,'welcome'])->name('welcome');
 
@@ -26,6 +28,6 @@ Route::get('/dettaglio/annuncio/{announcement}', [AnnouncementController::class,
 // Home revisore
 Route::get('/revisor/home',[RevisorController::class,'index'])->name('revisor.index');
 // Accetta annuncio
-Route::patch('/accetta/annuncio/{announcement}',[RevisorController::class,'acceptAnnouncement'])->name('revisor.accept_announcement');
+Route::PATCH('/accetta/annuncio/{announcement}',[RevisorController::class,'acceptAnnouncement'])->name('revisor.accept_announcement');
 // Rifiuta annuncio
-Route::patch('/rifiuta/annuncio/{announcement}',[RevisorController::class,'rejectAnnouncement'])->name('revisor.reject_announcement');
+Route::PATCH('/rifiuta/annuncio/{announcement}',[RevisorController::class,'rejectAnnouncement'])->name('revisor.reject_announcement');
