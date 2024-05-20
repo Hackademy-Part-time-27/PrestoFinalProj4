@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container">
         <div class="row">
-                <div class="col-md-6 mx-auto mt-5">
+                <div class="col-md-6 mx-auto mt-4">
                     <div class="mb-3">
                         <h1>Benvenuto, Registrati qui!</h1>
                     </div>

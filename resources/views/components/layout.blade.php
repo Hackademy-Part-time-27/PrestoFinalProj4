@@ -10,24 +10,61 @@
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Dosis:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
 </head>
 <body>
     <x-navbar2/>
 
     <div>
         {{ $slot }}
+        
     </div>
     
     <x-footer/>
 <script>
 
+    let title =localStorage.getItem('data-theme')
+    
+
+     
+    if(title=='dark'){
+        var el=document.documentElement;
+        el.setAttribute('data-theme','dark')
+        }else{
+            var el=document.documentElement;
+            el.setAttribute('data-theme', 'light')
+        }
+    
+
     function changeMode(){
+        if(title=='light'){
+            localStorage.setItem('data-theme','dark')
+            title=localStorage.getItem('data-theme')
+                    if(title=='dark'){
+                var el=document.documentElement;
+                el.setAttribute('data-theme','dark')
+                }else{
+                    var el=document.documentElement;
+                    el.setAttribute('data-theme', 'light')
+                }
+        }else{
+            localStorage.setItem('data-theme','light')
+            title=localStorage.getItem('data-theme')
+                if(title=='dark'){
+            var el=document.documentElement;
+            el.setAttribute('data-theme','dark')
+            }else{
+                var el=document.documentElement;
+                el.setAttribute('data-theme', 'light')
+            }
+        }
+        /*
         var el=document.documentElement;
         if(el.getAttribute('data-theme')=='dark'){
             el.setAttribute('data-theme', 'light')
         }else{
             el.setAttribute('data-theme','dark')
-        }
+        } */
     }
 
 </script>
