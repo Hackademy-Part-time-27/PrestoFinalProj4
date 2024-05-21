@@ -13,6 +13,7 @@
             <li class="nav-item me-4">
                 <a class="nav-link hover" href="{{ route('contacts') }}">Contattaci</a>
             </li>
+            @if(auth()->user())
             @if(auth()->user()->is_revisor)
                 <li class="nav-item me-4 @if(App\Models\Announcement::toBeRevisionedCount()!=0)revision-element @endif position-relative">
                     <a href="{{ route('revisor.index') }}" class="nav-link hover">Revisiona</a>
@@ -21,7 +22,8 @@
                         <span class="visually-hidden">unread messages</span>
                     </span>
                 </li>
-            @endif    
+            @endif 
+            @endif   
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle hover " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Categorie
