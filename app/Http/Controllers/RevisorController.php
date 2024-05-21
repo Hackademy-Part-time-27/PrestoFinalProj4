@@ -24,4 +24,19 @@ class RevisorController extends Controller
         $announcement->setAccepted(false);
         return redirect()->back()->with(['message'=>'Complimenti hai rifutato l\'annuncio!']);
     }
+
+    
+    public function viewForm() 
+    {
+        return view('revisor.form');
+    }
+
+    
+    public function post(Request $request) 
+    {
+        Mail::to('marco@example.com')->send(new ViewForm($request->email));
+        return view('revisor.form')->with('message','Complimenti la richiesta è stata inoltrata correttamente , ti invieremo una mail ');
+        
+    }
+
 }

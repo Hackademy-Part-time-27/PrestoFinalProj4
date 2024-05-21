@@ -31,3 +31,7 @@ Route::get('/revisor/home',[RevisorController::class,'index'])->name('revisor.in
 Route::PATCH('/accetta/annuncio/{announcement}',[RevisorController::class,'acceptAnnouncement'])->name('revisor.accept_announcement');
 // Rifiuta annuncio
 Route::PATCH('/rifiuta/annuncio/{announcement}',[RevisorController::class,'rejectAnnouncement'])->name('revisor.reject_announcement');
+
+Route::get('/form/revisor', [RevisorController::class, 'viewForm'])->name('revisor.form')->middleware('auth');
+
+Route::post('/revisor/form',[RevisorController::class,'post'])->name('revisor.post');
