@@ -66,8 +66,8 @@
             </li>
             
             @endauth
-            <form action="{{ route('announcements.search') }}" method="GET" class="d-flex ms-4">
-    <input name="searched" class="form-control me-2" type="search" placeholder="Search" aria-label="search">
+            <form action="{{ route('announcements.search') }}" method="GET" class=" d-flex w-75 ms-4">
+    <input name="searched" class="form-control me-2 " type="search" placeholder="Search" aria-label="search">
 <button class="btn btn-outline-success" type="submit">Search</button>
 </form>
         </ul>

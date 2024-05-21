@@ -35,3 +35,7 @@ Route::PATCH('/rifiuta/annuncio/{announcement}',[RevisorController::class,'rejec
 
 Route::get('/ricerca/annuncio',[FrontController::class,'searchAnnouncements'])->name('announcements.search');
 Route::get('/announcements/index',[FrontController::class,'index'])->name('announcement.index');
+
+Route::get('/form/revisor', [RevisorController::class, 'viewForm'])->name('revisor.form')->middleware('auth');
+
+Route::post('/revisor/form',[RevisorController::class,'post'])->name('revisor.post');
