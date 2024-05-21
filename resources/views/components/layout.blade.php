@@ -22,51 +22,30 @@
     
     <x-footer/>
 <script>
-
     let title =localStorage.getItem('data-theme')
-    
+    setAttrribute()
 
-     
-    if(title=='dark'){
-        var el=document.documentElement;
-        el.setAttribute('data-theme','dark')
-        }else{
+    function setAttrribute(){
+        if(title=='dark'){
             var el=document.documentElement;
-            el.setAttribute('data-theme', 'light')
+            el.setAttribute('data-theme','dark')
+        }else{
+        var el=document.documentElement;
+        el.setAttribute('data-theme', 'light')
         }
-    
+    }
 
     function changeMode(){
         if(title=='light'){
             localStorage.setItem('data-theme','dark')
             title=localStorage.getItem('data-theme')
-                    if(title=='dark'){
-                var el=document.documentElement;
-                el.setAttribute('data-theme','dark')
-                }else{
-                    var el=document.documentElement;
-                    el.setAttribute('data-theme', 'light')
-                }
-        }else{
+                setAttrribute();
+        }else if(title=='dark') {
             localStorage.setItem('data-theme','light')
             title=localStorage.getItem('data-theme')
-                if(title=='dark'){
-            var el=document.documentElement;
-            el.setAttribute('data-theme','dark')
-            }else{
-                var el=document.documentElement;
-                el.setAttribute('data-theme', 'light')
-            }
+                setAttrribute ();
         }
-        /*
-        var el=document.documentElement;
-        if(el.getAttribute('data-theme')=='dark'){
-            el.setAttribute('data-theme', 'light')
-        }else{
-            el.setAttribute('data-theme','dark')
-        } */
     }
-
 </script>
 </body>
 </html>

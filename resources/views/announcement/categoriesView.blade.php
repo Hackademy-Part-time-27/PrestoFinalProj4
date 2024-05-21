@@ -8,7 +8,7 @@
         <div class="row justify-content-start">
             <div class="col-md-12">
                 <div class="container">
-                    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 justify-content-center">
                         @forelse($announcements as $announcement)
                             <div class="col-xxl mx-4 mt-5 ">
                                 <div class="card-custom shadow" style="width: 18rem;">
@@ -29,7 +29,8 @@
                     </div>
                 </div>
             </div>
-                <div class="col-12">
+            @empty 
+                <div class="col-12 w-100">
                     <div class="my-3 text-center">
                         <div class="container-xl">
                             <h2>Non sono presenti Annunci per questa categoria</h2>

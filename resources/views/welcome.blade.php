@@ -1,8 +1,9 @@
 <x-layout>
     <div class="row bg-2 m-0 py-4 w-100">
-        <div class="col-md-8 mx-auto py-4 " >  
+        < class="col-md-8 mx-auto py-4 " >  
                 <h1>Benvenuto su <span class="text-3 ">{{ config('app.name') }}</span></h1>
                 <h2>Ecco gli ultimi annunci</h2>
+                <x-error/>
         </div>
     </div>
     <div class="container-fluid px-5">
