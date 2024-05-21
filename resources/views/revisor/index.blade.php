@@ -4,7 +4,15 @@
         <h1>
             {{$announcement_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}}
         </h1>
+        <div class="col-4">
+        @if(session()->has('message'))
+        <div class="alert alert-success">
+            {{ session('message') }}
+        </div>
+        @endif
     </div>
+    </div>
+
 </div>
 @if($announcement_to_check)
     <div class="container">
