@@ -36,6 +36,7 @@
                     </ul>
             </li>
         </ul>
+        
         <ul class="navbar-nav justify-content-end align-items-center w-25 fs-4 ">
              <li onclick="changeMode()" id="light" class="hover nav-item me-4 light"><span class="material-symbols-outlined position-light ">light_mode</span></li>
              <li onclick="changeMode()" id="night" class="me-4 hover nav-item dark"><span class="material-symbols-outlined position-dark">mode_night</span></li>
@@ -63,7 +64,12 @@
             <li class="nav-item">
                 <a class="nav-link hover" href="/login">Login</a>
             </li>
+            
             @endauth
+            <form action="{{ route('announcements.search') }}" method="GET" class="d-flex ms-4">
+    <input name="searched" class="form-control me-2" type="search" placeholder="Search" aria-label="search">
+<button class="btn btn-outline-success" type="submit">Search</button>
+</form>
         </ul>
     </div>
   </div>

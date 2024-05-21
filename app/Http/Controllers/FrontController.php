@@ -34,4 +34,9 @@ public function indexForCategory(Category $category)
     ]);
 }
 
+public function searchAnnouncements (Request $request)
+{
+    $announcements = Announcement::search( $request->searched)->where('is_accepted', true)->paginate(10);
+    return view('announcement.index', compact ('announcements'));
+}
 }

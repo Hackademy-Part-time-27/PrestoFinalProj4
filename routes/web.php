@@ -11,6 +11,7 @@ use App\Http\Controllers\RevisorController;
 
 Route::get('/',[FrontController::class,'welcome'])->name('welcome');
 
+
 Route::get('/announcements/{category}', [FrontController::class , 'indexForCategory'])->name('announcementes.category-filter');
 
 Route::get('/user/index',[UserController::class,'index'])->name('user.index');
@@ -31,3 +32,6 @@ Route::get('/revisor/home',[RevisorController::class,'index'])->name('revisor.in
 Route::PATCH('/accetta/annuncio/{announcement}',[RevisorController::class,'acceptAnnouncement'])->name('revisor.accept_announcement');
 // Rifiuta annuncio
 Route::PATCH('/rifiuta/annuncio/{announcement}',[RevisorController::class,'rejectAnnouncement'])->name('revisor.reject_announcement');
+
+Route::get('/ricerca/annuncio',[FrontController::class,'searchAnnouncements'])->name('announcements.search');
+Route::get('/announcements/index',[FrontController::class,'index'])->name('announcement.index');

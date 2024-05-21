@@ -27,6 +27,7 @@ class CreateAnnouncement extends Component
             'title'=>'required',
             'body'=>'required',
             'price'=>'required',
+            'category_id'=>'required',
         ];
     }
 
