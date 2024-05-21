@@ -6,12 +6,8 @@
                 <h1>Benvenuto su {{ config('app.name') }}</h1>
       
             </div>
-         
-
- 
-
-
-</div>
+        </div>
+    </div>
 <div class="container mt-4">
            <div class="row">
                 @forelse($category->announcements as $announcement)
@@ -24,7 +20,7 @@
                             <p class="card-text">prezzo:{{$announcement->price}}</p>
                             <p class="card-footer">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}}</p>
 
-                            <a href="#" class="btn-custom-2 text-decoration-none">Visualizza</a>
+                            <a href="{{ route('announcements.show', $announcement) }}" class="btn-custom-2 text-decoration-none">Visualizza</a>
                         </div>
                     </div>
            </div>

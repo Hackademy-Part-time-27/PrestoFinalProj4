@@ -18,7 +18,7 @@
                                         <p class="card-text fs-5">{{$announcement->body}}</p>
                                         <p class="card-text fs-4 text-danger ">{{Number::currency($announcement->price, in: 'EUR', locale: 'de')}}</p>
                                         <div class="my-4">
-                                            <a href="#" class="btn-custom text-decoration-none">Visualizza</a>
+                                            <a href="{{ route('announcements.show', $announcement) }}" class="btn-custom text-decoration-none">Visualizza</a>
                                         </div>
                                         <div class="d-flex justify-content-end text-end pe-3 mb-0">
                                             <p class="card-footer fs-6">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}}</p>
