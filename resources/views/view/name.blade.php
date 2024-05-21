@@ -9,6 +9,9 @@
         <div class="row justify-content-start">
             <div class="col-md-12">
               <h1>L'utente con mail:{{$email}} vuole diventare un revisore,clicca sul bottone per accettare la richiesta, altrimenti ignora.</h1>
+              <div class="mt-3">
+                <a class="text-decoration-none btn-custom" href="{{ route('revisor.make', $email) }}">Rendi Ufficialmente Revisore</a>
+              </div>
             </div>
         </div>
     </div>

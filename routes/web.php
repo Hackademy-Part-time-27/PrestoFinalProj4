@@ -39,3 +39,4 @@ Route::get('/announcements/index',[FrontController::class,'index'])->name('annou
 Route::get('/form/revisor', [RevisorController::class, 'viewForm'])->name('revisor.form')->middleware('auth');
 
 Route::post('/revisor/form',[RevisorController::class,'post'])->name('revisor.post');
+Route::get('/Accepting/Revisor/{email}', [RevisorController::class, 'MakeRevisor'])->name('revisor.make');

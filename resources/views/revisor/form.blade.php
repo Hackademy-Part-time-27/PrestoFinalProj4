@@ -5,9 +5,21 @@
 
         <div class="col-md-6 mx-auto mt-4">
             <h1> Lavora Con Noi</h1>
+            <div class="my-2">
+                @if(session()->has('message'))
+                <div class="alert alert-success">
+                    {{ session('message') }}
+                </div>
+                @endif
+                @if(session()->has('error'))
+                <div class="alert alert-danger">
+                    {{ session('error') }}
+                </div>
+                @endif
+            </div>
 
             <div class="mt-5 ">
-                <form action="#" method="POST">
+                <form action="{{ route('revisor.post')}}" method="POST">
                     @csrf
                     <div class="row g-3">
                         <div class="col-12">

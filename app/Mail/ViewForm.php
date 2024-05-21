@@ -12,13 +12,13 @@ use Illuminate\Queue\SerializesModels;
 class ViewForm extends Mailable
 {
     use Queueable, SerializesModels;
-public $user;
+public $email;
     /**
      * Create a new message instance.
      */
-    public function __construct(User $user)
+    public function __construct( $email)
     {
-        $this->user = $user;
+        $this->email = $email;
     }
 
     public function build()

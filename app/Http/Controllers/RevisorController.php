@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Announcement;
+use App\Mail\ViewForm;
+use \Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Artisan;
 
 class RevisorController extends Controller
 {
@@ -34,9 +37,20 @@ class RevisorController extends Controller
     
     public function post(Request $request) 
     {
-        Mail::to('marco@example.com')->send(new ViewForm($request->email));
-        return view('revisor.form')->with('message','Complimenti la richiesta è stata inoltrata correttamente , ti invieremo una mail ');
+        if(auth()->user()->email == $request->email){
+            Mail::to('admin@example.com')->send(new ViewForm($request->email));
+        return redirect()->back()->with(['message'=>'Complimenti la richiesta è stata inoltrata correttamente!']);
+        }
+        else {
+            return redirect()->back()->with(['error'=>'La mail non è valida']);
+        }
+ 
         
     }
 
+    public function MakeRevisor($email)
+    {
+        Artisan::call('presto:makeUserRevisor', ['email'=>$email]);
+        return redirect()->route('welcome')->with(['success'=>'Complimenti sei diventato revisore']);
+    }
 }
