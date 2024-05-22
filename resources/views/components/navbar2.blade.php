@@ -13,6 +13,9 @@
             <li class="nav-item me-4">
                 <a class="nav-link hover" href="{{ route('contacts') }}">Contattaci</a>
             </li>
+            <li class="nav-item me-4">
+                <a class="nav-link hover" href="{{ route('announcements.list') }}">Annunci</a>
+            </li>
             @if(auth()->user())
             @if(auth()->user()->is_revisor)
                 <li class="nav-item me-4 @if(App\Models\Announcement::toBeRevisionedCount()!=0)revision-element @endif position-relative">

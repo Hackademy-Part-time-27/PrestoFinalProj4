@@ -31,9 +31,9 @@ Route::get('/revisor/home',[RevisorController::class,'index'])->name('revisor.in
 Route::PATCH('/accetta/annuncio/{announcement}',[RevisorController::class,'acceptAnnouncement'])->name('revisor.accept_announcement');
 // Rifiuta annuncio
 Route::PATCH('/rifiuta/annuncio/{announcement}',[RevisorController::class,'rejectAnnouncement'])->name('revisor.reject_announcement');
-//Ricerca
+//Ricerca & Index Annunci 
 Route::get('/ricerca/annuncio',[FrontController::class,'searchAnnouncements'])->name('announcements.search');
-Route::get('/announcements/index',[FrontController::class,'index'])->name('announcement.index');
+Route::get('/lista/annunci',[FrontController::class,'test'])->name('announcements.list');
 //Form to make User Revisor
 Route::get('/form/revisor', [RevisorController::class, 'viewForm'])->name('revisor.form')->middleware('auth');
 Route::post('/revisor/form',[RevisorController::class,'post'])->name('revisor.post');
