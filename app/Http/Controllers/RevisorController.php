@@ -28,6 +28,20 @@ class RevisorController extends Controller
         return redirect()->back()->with(['message'=>'Complimenti hai rifutato l\'annuncio!']);
     }
 
+    public function getBack()
+    {
+
+        if(Announcement::where('is_accepted', [true, false])->count() !== 0){
+            $announcement= Announcement::where('user_id', auth()->user()->id);
+            $announcement= $announcement->where('is_accepted', [true, false])->orderByDesc('updated_at')->first();
+            $announcement->is_accepted = null;
+            $announcement->save();
+            return redirect()->back()->with(['message'=>'Ora puoi revisionare nuovamente l\'annuncio!']);
+        }else{
+            return redirect()->back()->with(['message'=>'Hai già ritirato tutti gli annunci pre-revisionati!']);
+        }
+
+    }
     
     public function viewForm() 
     {

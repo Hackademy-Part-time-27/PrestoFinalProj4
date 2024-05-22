@@ -66,6 +66,14 @@
                 </div>
             </div>
         </div>
+        @endif
     </div>
-@endif
+    <div class="container pt-3 ">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <a class="btn btn-secondary text-decoration-none" href="{{ route('revisor.getBack') }}">Torna indietro all'ultimo annuncio</a>
+            </div>
+        </div>
+    </div>
+
 </x-layout>
