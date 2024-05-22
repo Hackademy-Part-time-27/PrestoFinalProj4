@@ -33,7 +33,7 @@ Route::PATCH('/accetta/annuncio/{announcement}',[RevisorController::class,'accep
 Route::PATCH('/rifiuta/annuncio/{announcement}',[RevisorController::class,'rejectAnnouncement'])->middleware('isRevisor')->name('revisor.reject_announcement');
 //Ricerca
 Route::get('/ricerca/annuncio',[FrontController::class,'searchAnnouncements'])->name('announcements.search');
-Route::get('/announcements/index',[FrontController::class,'index'])->name('announcement.index');
+Route::get('/lista/annunci',[FrontController::class,'test'])->name('announcements.list');
 //Form to make User Revisor
 Route::get('/form/revisor', [RevisorController::class, 'viewForm'])->name('revisor.form')->middleware('auth');
 Route::post('/revisor/form',[RevisorController::class,'post'])->name('revisor.post');
