@@ -37,8 +37,18 @@
                             </div>
                         </div>
                     @endforelse
+                    
                     </div>
                 </div>
+                <div class="ms-5 text-center">
+                   
+                </div>
+                </div>
+                
+        </div>
+        <div class="row justify-content-center mt-4">
+            <div class="col-lg-4 mt-5">
+            {{ $announcements->links() }}
             </div>
         </div>
     </div>
