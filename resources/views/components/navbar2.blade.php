@@ -20,7 +20,8 @@
             @if(auth()->user()->is_revisor)
                 <li class="nav-item me-4 @if(App\Models\Announcement::toBeRevisionedCount()!=0)revision-element @endif position-relative">
                     <a href="{{ route('revisor.index') }}" class="nav-link hover">Revisiona</a>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger mt-2">
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger mt-2 @if(App\Models\Announcement::toBeRevisionedCount()==0)
+                    d-none @endif">
                         {{App\Models\Announcement::toBeRevisionedCount()}}
                         <span class="visually-hidden">unread messages</span>
                     </span>
@@ -34,7 +35,7 @@
       
                     <ul class="dropdown-menu dropdown-menu-end uppercased bg-drop m-0 px-3 fs-5">
                         @foreach($categories as $category)
-                        <li  class="border-bttm"><a class="dropdown-element" href="{{ route('announcementes.category-filter', $category ) }}">{{ $category->name }}</a></li>
+                        <li  class="border-bttm"><a class="dropdown-element" href="{{ route('announcements.category-filter', $category ) }}">{{ $category->name }}</a></li>
                         @endforeach
                     </ul>
             </li>
@@ -69,10 +70,10 @@
             </li>
             
             @endauth
-            <form action="{{ route('announcements.search') }}" method="GET" class=" d-flex w-75 ms-4">
-    <input name="searched" class="form-control me-2 " type="search" placeholder="Search" aria-label="search">
-<button class="btn btn-outline-success" type="submit">Search</button>
-</form>
+            <form action="{{ route('announcements.search') }}" method="GET" class="d-flex w-75 ms-4">
+                <input name="searched" class="form-control me-2 fs-4" type="search" placeholder="Search" aria-label="search">
+                <button class="btn btn-outline-success fs-4" type="submit">Search</button>
+            </form>
         </ul>
     </div>
   </div>
