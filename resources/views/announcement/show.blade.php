@@ -31,7 +31,7 @@
               <h5 class="card-title">Titolo {{$announcement->title}}</h5>
               <p class="card-text">Descrizione: {{$announcement->body}}</p>
               <p class="card-text">Prezzo: {{$announcement->price}}</p>
-              <a href="{{route('announcementes.category-filter',['category'=>$announcement->category])}}" class="my-2 border-top pt-2 border-dark card-link sadow btn-btn-success">Categoria: {{$announcement->category->name}}</a>
+              <a href="{{route('announcements.category-filter',['category'=>$announcement->category])}}" class="my-2 border-top pt-2 border-dark card-link sadow btn-btn-success">Categoria: {{$announcement->category->name}}</a>
          
         </div>
     </div>
