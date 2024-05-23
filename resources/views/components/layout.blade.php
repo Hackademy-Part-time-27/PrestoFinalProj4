@@ -60,7 +60,7 @@
     if(windows=="http://127.0.0.1:8000/"){
         modal.style.animation=' bump 1s linear';
         setTimeout(()=> {
-            modal.style.animation='myAnim 2s ease 0s 1 normal forwards';
+            modal.style.animation='myAnim 1s ease 0s 1 normal forwards';
         }, 1000)
         modal.style.top='200px';
    

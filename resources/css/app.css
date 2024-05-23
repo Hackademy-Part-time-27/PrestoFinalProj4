@@ -275,8 +275,8 @@ nav {
  .modale{
     padding-top: 12px;
     padding-left: 8px;
-    width: 400px;
-    height: 200px;
+    width: 580px;
+    height: 240px;
     background: var(--color-bg-2);
     text-align: center;
     border-radius: 20px;
@@ -287,12 +287,16 @@ nav {
     display: block;
     box-shadow: 0 0 40px grey;
  }
+ .modale .btn-custom{
+    font-size: 24px;
+ }
 
  .contenitore{
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: space-between;
+    height: 75%;
  }
 
 .closing{
@@ -374,3 +378,39 @@ nav {
 		transform: translateY(0px);
 	}
 }
+
+/*
+@keyframes bump {
+    0% {
+        top: -200px;
+    }
+    100%{
+        top: 200px;
+    }
+}
+
+@keyframes myAnim {
+    0%{
+        animation-timing-function: linear;
+        transform: translateY(0px);
+    }
+
+    50%{
+        animation-timing-function: linear;
+        transform: translateY(-20px);
+    }
+    75%, 85%, 100% {
+        animation-timing-function: linear;
+        transform: translateY(0px);
+    }
+    80%{
+        animation-timing-function: linear;
+        transform: translateY(-15px);
+    }
+
+    90%{
+        animation-timing-function: linear;
+        transform: translateY(-10);
+    }
+}
+*/

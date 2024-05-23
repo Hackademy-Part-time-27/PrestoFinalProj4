@@ -6,17 +6,17 @@
                 <x-error/>
 
                 <div class="modale" id="modal">
-                    <div class="contenitore">
-                        <div>
-                            <div style="cursor: pointer;" class="closing">
+                    <div style="cursor: pointer;" class="closing">
                             <span onclick="closeModal()" class="material-symbols-outlined">
                                 close
                             </span>
                             </div>
-                                <h2>Vuoi inserire un annuncio??</h2>
+                    <div class="contenitore">
+                        <div class="mt-5">
+                            <h2>Vuoi inserire un annuncio??</h2>
                         </div>
                         <div>
-                                <a class="btn-custom text-decoration-none" href="{{ route('announcement.create')}}">Inserisci!</a>
+                             <a class="btn-custom text-decoration-none" href="{{ route('announcement.create')}}">Inserisci!</a>
                         </div>
                     </div>
                 </div>
