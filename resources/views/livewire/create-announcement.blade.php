@@ -31,6 +31,13 @@
                         @error('price') <span class="text-danger ">{{ $message }}</span> @enderror
                     </div>
                     <div class="mb-3">
+                        <div class="mt-2">
+                            <div wire:loading> 
+                                <div class="spinner-border text-secondary" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                            </div>
+                        </div>
                         <button class="btn-custom" type="submit">Crea</button>
                     </div>
             </form> 
