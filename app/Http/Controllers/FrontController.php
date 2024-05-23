@@ -44,7 +44,7 @@ public function searchAnnouncements (Request $request)
 
 public function test()
 {
-    $announcements = Announcement::paginate(10);
+    $announcements = Announcement::paginate(6);
 
     return view('announcement.list', compact('announcements')) ;
 }
