@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Announcement;
+use Illuminate\Pagination\Paginator;
 
 class FrontController extends Controller
 {
@@ -37,14 +38,16 @@ public function indexForCategory(Category $category)
 public function searchAnnouncements (Request $request)
 {
     $announcements = Announcement::search( $request->searched)->where('is_accepted', true)->paginate(10);
-    return view('announcement.index', compact ('announcements'));
+    return view('announcement.list', compact ('announcements'));
 }
-public function index()
-    {
-        // Logica per gestire la richiesta
-        $announcements = Announcement::all(); // Presupponendo che esista un modello Announcement
 
-        // Restituisce una vista con i dati degli annunci
-        return view('announcements.index', compact('announcements'));
-    }
+
+public function test()
+{
+    $announcements = Announcement::paginate(10);
+
+    return view('announcement.list', compact('announcements')) ;
+}
+
+
 }

@@ -3,31 +3,31 @@
 
 [data-theme='dark'] {
     --color: transparent;
-    --color-bg: #1D2125;
-    --color-bg-2: #161A1D;
-    --text-color: #8C9BAB;
-    --text-color-2: #B6C2CF;
-    --text-color-3: #579dff;
-    --btn-color: white;
-    --btn-text: black;
-    --alpha-color: #9BB4CA80;
-    --alpha-color-2:#4D579dff;
-    --shadow-1:#161A1D;
+    --color-bg: #1D2125 !important;
+    --color-bg-2: #161A1D !important;
+    --text-color: #8C9BAB !important;
+    --text-color-2: #B6C2CF !important;
+    --text-color-3: #579dff !important;
+    --btn-color: white !important;
+    --btn-text: black !important;
+    --alpha-color: #9BB4CA80 !important;
+    --alpha-color-2:#4D579dff !important;
+    --shadow-1:#161A1D!important;
 }
 
 [data-theme='light'] {
     --color: transparent;
-    --color-bg: #ffffff;
-    --color-bg-2: #EEEEEE;
-    --text-color: #38414A;
-    --text-color-2: #758195;
-    --text-color-3: #579dff;
-    --text-color-4: #2C3E5D;
-    --btn-color: black;
-    --btn-text: white;
-    --alpha-color: #091E427D;
-    --alpha-color-2:rgba(77, 86, 157, 0.541);
-    --shadow-1:grey;
+    --color-bg: #ffffff !important;
+    --color-bg-2: #EEEEEE !important;
+    --text-color: #38414A !important;
+    --text-color-2: #758195 !important ;
+    --text-color-3: #579dff !important;
+    --text-color-4: #2C3E5D !important;
+    --btn-color: black !important;
+    --btn-text: white !important;
+    --alpha-color: #091E427D !important;
+    --alpha-color-2:rgba(77, 86, 157, 0.541) !important;
+    --shadow-1:grey!important;
 
 }
 
@@ -45,11 +45,13 @@
 
 body {
     background-color: var(--color-bg);
+    height: 2000px;
     margin: 0;
     font-family: "Dosis", sans-serif;
     font-optical-sizing: auto;
-    font-weight: weight;
+    font-weight: 700;
     font-style: normal;
+    
     text-transform: uppercase;
     color: var(--text-color) !important;
 }
@@ -114,18 +116,6 @@ nav ul li a {
     cursor: pointer;
 }
 
-body {
-    background-color: var(--color-bg);
-    height: 2000px;
-    margin: 0;
-    font-family: "Dosis", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    text-transform: uppercase;
-    color: var(--text-color) !important;
-}
-
 nav {
     font-family: "Dosis", sans-serif;
     font-optical-sizing: auto;
@@ -136,13 +126,16 @@ nav {
 }
 
 .btn-custom {
-    --size1: 1%;
+    min-height: max-content;
+    display: flex;
+    flex-flow: row wrap;
+    --size1: 10px;
     --size2: 8%;
     padding-top: var(--size1);
     padding-bottom: var(--size1);
     padding-left: var(--size1);
     padding-right: var(--size1);
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
     background-color: var(--text-color-3);
     color: var(--color-bg-2);
@@ -154,6 +147,10 @@ nav {
 }
 
 .btn-custom-2 {
+    min-width: max-content;
+    min-height: 200px;
+    display: flex;
+    flex-wrap: wrap;
     --size1: 1.9%;
     --size2: 8%;
     padding-top: var(--size1);
@@ -170,8 +167,28 @@ nav {
 
 .btn-custom:hover {
     opacity: 0.7;
+    animation: pulse 1s infinite;
 }
 
+@keyframes pulse {
+    0%{
+        transform: scale(1);
+        
+    }
+    25% {
+        transform: scale(0.90);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(0.90);
+    }
+    100%{
+        transform: scale(1);
+    }
+    
+}
 
 
 
@@ -193,8 +210,9 @@ nav {
 }
 
 .card-custom {
+    min-height: 700px;
     color: var(--text-color);
-    background-image: linear-gradient(180deg, var(--color-bg),var(--color-bg-2)) ;
+    background-image: linear-gradient(180deg, var(--color-bg)10%,var(--color-bg-2)100%) ;
     border-radius: 10px;
     padding-top: 0;
     padding-left: 4%;
@@ -203,6 +221,14 @@ nav {
     /*border: 1px solid var(--alpha-color);
     box-shadow: 0px 4px 23px var(--alpha-color);*/ 
 }
+
+
+[data-theme = "light"]{
+    .card-custom .btn-custom{
+    color: var(--text-color);
+}
+}
+
 
 .card-custom:hover {
     transform: scale(1.03);
@@ -220,3 +246,7 @@ nav {
     background-color: var(--alpha-color-2) ;
 
 }
+
+.font-400{
+    font-weight: 400;
+ }

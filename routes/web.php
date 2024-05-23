@@ -13,7 +13,7 @@ Route::get('/',[FrontController::class,'welcome'])->name('welcome');
 //Categoria mcr
 Route::resource('/category', CategoryController::class)->middleware('auth');
 
-Route::get('/announcements/{category}', [FrontController::class , 'indexForCategory'])->name('announcementes.category-filter');
+Route::get('/announcements/{category}', [FrontController::class , 'indexForCategory'])->name('announcements.category-filter');
 
 Route::get('/user/index',[UserController::class,'index'])->name('user.index');
 
@@ -26,14 +26,14 @@ Route::post('/contatti/send', [ContactController::class, 'send'])->name('contact
 Route::get('/dettaglio/annuncio/{announcement}', [AnnouncementController::class, 'showAnnouncement'])->name('announcements.show');
 
 // Home revisore
-Route::get('/revisor/home',[RevisorController::class,'index'])->name('revisor.index');
+Route::get('/revisor/home',[RevisorController::class,'index'])->middleware('isRevisor')->name('revisor.index');
 // Accetta annuncio
-Route::PATCH('/accetta/annuncio/{announcement}',[RevisorController::class,'acceptAnnouncement'])->name('revisor.accept_announcement');
+Route::PATCH('/accetta/annuncio/{announcement}',[RevisorController::class,'acceptAnnouncement'])->middleware('isRevisor')->name('revisor.accept_announcement');
 // Rifiuta annuncio
-Route::PATCH('/rifiuta/annuncio/{announcement}',[RevisorController::class,'rejectAnnouncement'])->name('revisor.reject_announcement');
+Route::PATCH('/rifiuta/annuncio/{announcement}',[RevisorController::class,'rejectAnnouncement'])->middleware('isRevisor')->name('revisor.reject_announcement');
 //Ricerca
 Route::get('/ricerca/annuncio',[FrontController::class,'searchAnnouncements'])->name('announcements.search');
-Route::get('/announcements/index',[FrontController::class,'index'])->name('announcement.index');
+Route::get('/lista/annunci',[FrontController::class,'test'])->name('announcements.list');
 //Form to make User Revisor
 Route::get('/form/revisor', [RevisorController::class, 'viewForm'])->name('revisor.form')->middleware('auth');
 Route::post('/revisor/form',[RevisorController::class,'post'])->name('revisor.post');

@@ -1,22 +1,16 @@
 <x-layout>
     <div class="row bg-2 m-0 py-4 w-100">
-        <div class="col-md-8 mx-auto py-4 ">  
+        <div class="col-md-8 mx-auto py-4 " >  
                 <h1>Benvenuto su <span class="text-3 ">{{ config('app.name') }}</span></h1>
-                <h2>Ecco gli ultimi annunci</h2>
-                <x-error/>
-        </div>
-        <div class="col-md-2 py-4">
-            <div>
-                <a class="btn-custom text-decoration-none fs-4" href="{{ route('announcement.create') }}">Crea annuncio</a>
-            </div>
+                <h2>Ecco i nostri Annunci</h2>
         </div>
     </div>
     <div class="container-fluid mt-5 ">
-        <div class="row justify-content-center">
+        <div class="row justify-content-start">
             <div class="col-12">
                 <div class="container-sm">
-                    <div class="row justify-content-center">
-                        @foreach($announcements as $announcement)
+                    <div class="row justify-content-start">
+                        @forelse($announcements as $announcement)
                             <div class="col-4 mb-4">
                                 <div class="card-custom">
                                         <div class="">
@@ -38,11 +32,26 @@
                                         </div>
                                 </div>
                             </div>    
-                        @endforeach
+                        @empty
+                            <div class="col-12 w-50 mt-5 text-center">
+                                <div class="alert alert-warning  py-3 shadow text-center">
+                                    <p class="lead">Non ci sono annunci per questi campi. Prova a cambiare!</p>
+                                </div>
+                            </div>
+                        @endforelse
                     </div>
                 </div>
-                
+                <div class="row justify-content-center mt-4">
+                    <div class="col-lg-4 mt-5">
+                    {{ $announcements->links() }}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
 </x-layout>
+
+                    
+
+                    
