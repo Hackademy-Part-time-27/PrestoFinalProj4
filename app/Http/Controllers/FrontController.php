@@ -39,4 +39,12 @@ public function searchAnnouncements (Request $request)
     $announcements = Announcement::search( $request->searched)->where('is_accepted', true)->paginate(10);
     return view('announcement.index', compact ('announcements'));
 }
+public function index()
+    {
+        // Logica per gestire la richiesta
+        $announcements = Announcement::all(); // Presupponendo che esista un modello Announcement
+
+        // Restituisce una vista con i dati degli annunci
+        return view('announcements.index', compact('announcements'));
+    }
 }
