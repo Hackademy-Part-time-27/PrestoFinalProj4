@@ -30,6 +30,7 @@
     <x-footer/>
 <script>
     let title =localStorage.getItem('data-theme')
+    
     setAttrribute()
 
     function setAttrribute(){
