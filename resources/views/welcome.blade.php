@@ -34,11 +34,11 @@
                     <div class="row justify-content-center">
                         @foreach($announcements as $announcement)
                             <div class="col-4 mb-4">
-                                <div class="card-custom">
-                                        <div class="">
+                                <div class="card-custom mx-4 my-3">
+                                        <div class="div-img">
                                             <img class="img-fluid rounded-1 w-100" src="https://picsum.photos/200" class="card-img-top p-3 rounded" alt="...">
                                         </div>
-                                        <div class="text-start pt-2 " >
+                                        <div class="text-start pt-2 div-text-card " >
                                             <h2 class="card-title text-3 border-bttm">{{$announcement->title}}</h2>
                                             <p class="card-text fs-4 text-danger ">{{ $announcement->category->name}} </p>
                                             <p class="card-text fs-5 border-bttm">{{$announcement->body}}</p>
