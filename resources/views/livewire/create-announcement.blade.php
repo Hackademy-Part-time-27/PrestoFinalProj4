@@ -31,6 +31,11 @@
                         @error('price') <span class="text-danger ">{{ $message }}</span> @enderror
                     </div>
                     <div class="mb-3">
+                        <label class="form-label" for="title">Immagini</label>
+                        <input wire:model='temporary_images' class="form-control mb-2 @error('temporary_images') is-invalid @enderror" type="file" multiple placeholder="/Img">
+                        @error('temporary_images') <span class="text-danger ">{{ $message }}</span> @enderror
+                    </div>
+                    <div class="mb-3">
                         <div class="mt-2">
                             <div wire:loading> 
                                 <div class="spinner-border text-secondary" role="status">
@@ -38,6 +43,19 @@
                                 </div>
                             </div>
                         </div>
+                        @if(!empty($images))
+                            <div class="my-3 bordered rounded-2 m-2">
+                                            <h5>Preview Immagini</h5>
+                                        <div class="row justify-content-center mx-auto w-100 border-custom">
+                                                @foreach($images as $key => $image)
+                                                <div class="col">
+                                                    <span wire:click="removeImage({{$key}})" style="cursor:pointer;" class="material-symbols-outlined"> cancel </span>
+                                                    <img class="imfg-fluid img-edited my-3" src="{{ $image->temporaryUrl() }}" alt="">
+                                                </div>
+                                            @endforeach
+                                        </div>
+                            </div>
+                        @endif   
                         <button class="btn-custom" type="submit">Crea</button>
                     </div>
             </form> 
