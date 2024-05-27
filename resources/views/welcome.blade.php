@@ -1,8 +1,8 @@
 <x-layout>
     <div class="row bg-2 m-0 py-4 w-100 position-relative">
         <div class="col-md-8 mx-auto py-4 ">  
-                <h1>Benvenuto su <span class="text-3 ">{{ config('app.name') }}</span></h1>
-               <span class="d-flex align-items-center align-content-center justify-content-start"> <h2 class="me-3 mb-0 fs-3">Ecco gli ultimi annunci</h2> <a class="text-3 text-decoration-none fs-4 hover" href="{{ route('announcements.list') }}">Visualizzali tutti</a></span>
+                <h1><span class="text-3 ">{{__('ui.welcome') }}</span></h1>
+               <span class="d-flex align-items-center align-content-center justify-content-start"> <h2 class="me-3 mb-0 fs-3">{{__('ui.look_at_your_ads') }}</h2> <a class="text-3 text-decoration-none fs-4 hover" href="{{ route('announcements.list') }}">{{__('ui.view_all') }}</a></span>
                 <x-error/>
 
                 <div class="modale" id="modal">
@@ -13,17 +13,17 @@
                             </div>
                     <div class="contenitore">
                         <div class="mt-5">
-                            <h2>Vuoi inserire un annuncio??</h2>
+                            <h2>{{__('ui.modal_ads') }}</h2>
                         </div>
                         <div>
-                             <a class="btn-custom text-decoration-none" href="{{ route('announcement.create')}}">Inserisci!</a>
+                             <a class="btn-custom text-decoration-none" href="{{ route('announcement.create')}}">{{__('ui.modal_add_ads') }}</a>
                         </div>
                     </div>
                 </div>
         </div>
         <div class="col-md-2 py-4">
             <div>
-                <a class="btn-custom text-decoration-none fs-4" href="{{ route('announcement.create') }}">Crea annuncio</a>
+                <a class="btn-custom text-decoration-none fs-4" href="{{ route('announcement.create') }}">{{__('ui.create_ads') }}</a>
             </div>
         </div>
     </div>
@@ -45,11 +45,11 @@
                                             <span class="text-end "><p class="card-text fs-3 text-danger pe-4 ">{{Number::currency($announcement->price, in: 'EUR', locale: 'de')}}</p></span>
                                             
                                             <div class="my-4">
-                                                <a href="{{ route('announcements.show', ['announcement' => $announcement->id]) }}" class="btn-custom text-decoration-none fs-4">Visualizza</a>
+                                                <a href="{{ route('announcements.show', ['announcement' => $announcement->id]) }}" class="btn-custom text-decoration-none fs-4">{{__('ui.ads_view') }}</a>
                                             </div>
                                         
                                             <div class="d-flex justify-content-end text-end pe-3 mb-0">
-                                                <p class="card-footer fs-6">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}}</p>
+                                                <p class="card-footer fs-6">{{__('ui.ads_published') }} {{$announcement->created_at->format('d/m/Y')}}</p>
                                             </div> 
                                         </div>
                                 </div>

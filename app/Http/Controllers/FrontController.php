@@ -48,5 +48,11 @@ public function test()
 
     return view('announcement.list', compact('announcements')) ;
 }
+public function setLanguage($lang)
+{
+   
+   session()->put('locale', $lang);
+   return redirect()->back();
+}
 
 }

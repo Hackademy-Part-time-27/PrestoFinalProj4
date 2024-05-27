@@ -11,15 +11,15 @@
                 <a class="nav-link hover" aria-current="page" href="{{ route('welcome') }}">Home</a>
             </li>
             <li class="nav-item me-4">
-                <a class="nav-link hover" href="{{ route('contacts') }}">Contattaci</a>
+                <a class="nav-link hover" href="{{ route('contacts') }}">{{__('ui.navbar_contact_us') }}</a>
             </li>
             <li class="nav-item me-4">
-                <a class="nav-link hover" href="{{ route('announcements.list') }}">Annunci</a>
+                <a class="nav-link hover" href="{{ route('announcements.list') }}">{{__('ui.navbar_ads') }}</a>
             </li>
             @if(auth()->user())
             @if(auth()->user()->is_revisor)
                 <li class="nav-item me-4 @if(App\Models\Announcement::toBeRevisionedCount()!=0)revision-element @endif position-relative">
-                    <a href="{{ route('revisor.index') }}" class="nav-link hover">Revisiona</a>
+                    <a href="{{ route('revisor.index') }}" class="nav-link hover">{{__('ui.navbar_review') }}</a>
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger mt-2 @if(App\Models\Announcement::toBeRevisionedCount()==0)
                     d-none @endif">
                         {{App\Models\Announcement::toBeRevisionedCount()}}
@@ -30,7 +30,7 @@
             @endif   
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle hover " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Categorie
+                {{__('ui.navbar_category') }}
                 </a>
       
                     <ul class="dropdown-menu dropdown-menu-end uppercased bg-drop m-0 px-3 fs-5">
@@ -38,10 +38,30 @@
                         <li  class="border-bttm"><a class="dropdown-element" href="{{ route('announcements.category-filter', $category ) }}">{{ $category->name }}</a></li>
                         @endforeach
                     </ul>
+            </li>   
+            <li class="nav-item dropdown  ">
+                <a class="nav-link dropdown-toggle hover me-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {{__('ui.navbar_language') }}
+                </a>
+                    <ul class="dropdown-menu dropdown-menu-end uppercased bg-drop m-0 px-3 fs-5">
+                        <li class="dropdown-element ">
+                         
+                        </li>
+                        <li class="border-bttm text-center"><a class="dropdown-element "><x-_locale lang="it"></x-_locale></a></li>
+                        <li  class="border-bttm text-center" ><a class="dropdown-element" ><x-_locale lang="en"></x-_locale></a></li>
+                        <li  class=" text-center"><a class="dropdown-element " ><x-_locale lang="es"></x-_locale></a></li>
+                    </ul>
             </li>
         </ul>
         
+
+
+     
+
+
+
         <ul class="navbar-nav justify-content-end align-items-center w-25 fs-4 ">
+       
              <li onclick="changeMode()" id="light" class="hover nav-item me-4 light"><span class="material-symbols-outlined position-light ">light_mode</span></li>
              <li onclick="changeMode()" id="night" class="me-4 hover nav-item dark"><span class="material-symbols-outlined position-dark">mode_night</span></li>
             @auth
@@ -53,12 +73,12 @@
                         <li class="dropdown-element ps-1">
                             <form action="/logout" method="POST">
                                 @csrf
-                                <button class="dropdown-element text-classic uppercased dropdown-btn ps-0" type="submit">Logout</button>
+                                <button class="dropdown-element text-classic uppercased dropdown-btn ps-0" type="submit">   {{__('ui.logout') }}</button>
                             </form>
                         </li>
-                        <li class="border-bttm"><a class="dropdown-element " href="{{ route('category.create') }}">Crea Categoria</a></li>
-                        <li  class="border-bttm" ><a class="dropdown-element" href="{{ route('category.index')}}">Categorie</a></li>
-                        <li ><a class="dropdown-element" href="{{ route('announcement.create')}}">Crea Annuncio</a></li>
+                        <li class="border-bttm"><a class="dropdown-element " href="{{ route('category.create') }}">{{__('ui.create_category') }}</a></li>
+                        <li  class="border-bttm" ><a class="dropdown-element" href="{{ route('category.index')}}">  {{__('ui.navbar_category') }}</a></li>
+                        <li ><a class="dropdown-element" href="{{ route('announcement.create')}}">{{__('ui.create_ads') }}</a></li>
                     </ul>
             </li>
             @else
@@ -72,7 +92,7 @@
             @endauth
             <form action="{{ route('announcements.search') }}" method="GET" class="d-flex w-75 ms-4">
                 <input name="searched" class="form-control me-2 fs-4" type="search" placeholder="Search" aria-label="search">
-                <button class="btn btn-outline-success fs-4" type="submit">Search</button>
+                <button class="btn btn-outline-success fs-4" type="submit"> {{__('ui.navbar_search') }}</button>
             </form>
         </ul>
     </div>
