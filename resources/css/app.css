@@ -444,3 +444,8 @@ nav {
     border-radius: 4px;
 
 }
+
+.d-flex-custom{
+  width: fit-content;
+  height: min-content;
+}

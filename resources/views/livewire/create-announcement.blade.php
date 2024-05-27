@@ -32,8 +32,8 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="title">Immagini</label>
-                        <input wire:model='temporary_images' class="form-control mb-2 @error('temporary_images') is-invalid @enderror" type="file" multiple placeholder="/Img">
-                        @error('temporary_images') <span class="text-danger ">{{ $message }}</span> @enderror
+                        <input wire:model='temporary_images' class="form-control mb-2 @error('temporary_images.*') is-invalid @enderror" type="file" multiple placeholder="/Img">
+                        @error('temporary_images.*') <span class="text-danger ">{{ $message }}</span> @enderror
                     </div>
                     <div class="mb-3">
                         <div class="mt-2">

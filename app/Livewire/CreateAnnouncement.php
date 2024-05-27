@@ -75,13 +75,15 @@ class CreateAnnouncement extends Component
         //set user_id dell'utente
         
         $this->user_id = auth()->user()->id;
-        //$announcement = Announcement::create($this->only('title','body','price','category_id','user_id'));
-        //dd($announcement);
-       $this->announcement = Category::find($this->category_id)->announcements()->creaate($this->validate());
+       // $announcement = Announcement::create($this->only('title','body','price','category_id','user_id'));
+        $this->announcement = Category::find($this->category_id)->announcements()->create($this->validate());
+      
         if(count($this->images)!==0){
-          //  dd('siamo dentro');
+
             foreach($this->images as $image){
-                $this->announcement->images()->create(['path'=> $image->store('images', 'public')]);
+                //dd($image->path());
+                    $this->announcement->images()->create(['path'=>$image->store('images', 'public')]);
+            
             }
         }
  
@@ -96,6 +98,11 @@ class CreateAnnouncement extends Component
         $this->title='';
         $this->body='';
         $this->price='';
+        $this->temporary_images = [];
+        $this->images = [];
+        $this->announcement = '';
+        $this->category_id = '';
+
     }
 
     public function removeImage($key)
