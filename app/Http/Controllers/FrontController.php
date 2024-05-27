@@ -28,6 +28,7 @@ public function categoryShow(Category $category){
 public function indexForCategory(Category $category)
 {
     $announcements=$category->announcements;
+    $announcements=  $announcements->where('is_accepted', true)->get()->paginate(10);
 
     return view('announcement.categoriesView',[
         'category'=>$category,
@@ -44,7 +45,7 @@ public function searchAnnouncements (Request $request)
 
 public function test()
 {
-    $announcements = Announcement::paginate(6);
+    $announcements = Announcement::where('is_accepted', true)->paginate(6);
 
     return view('announcement.list', compact('announcements')) ;
 }

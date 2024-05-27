@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{{ config('app.name') }}</title>
     @vite(['resources/js/app.js','resources/css/app.css', 'resources/scss/app.scss', 'resources/scss/pagination.scss', 'resources/scss/variables.scss'])
     <!-- Vari Font di google-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,6 +30,7 @@
     <x-footer/>
 <script>
     let title =localStorage.getItem('data-theme')
+    
     setAttrribute()
 
     function setAttrribute(){
@@ -63,7 +64,7 @@
             modal.style.animation='myAnim 1s ease 0s 1 normal forwards';
         }, 1000)
         modal.style.top='200px';
-   
+
     }
 
     function closeModal(){
