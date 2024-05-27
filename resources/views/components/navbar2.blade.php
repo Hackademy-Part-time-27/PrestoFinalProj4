@@ -5,7 +5,7 @@
             </button>
     <div class="collapse navbar-collapse justify-content-between " id="navbarNavDropdown">
        
-        <ul class="navbar-nav fs-4 w-25 align-items-center align-content-center">
+        <ul class="navbar-nav fs-4 w-50 align-items-center align-content-center">
             <li class="nav-item me-5 text-3 fs-3">{{ config('app.name') }}</li>
             <li class="nav-item me-4">
                 <a class="nav-link hover" aria-current="page" href="{{ route('welcome') }}">Home</a>
