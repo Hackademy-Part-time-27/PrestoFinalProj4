@@ -77,6 +77,10 @@ class CreateAnnouncement extends Component
         $this->user_id = auth()->user()->id;
        // $announcement = Announcement::create($this->only('title','body','price','category_id','user_id'));
         $this->announcement = Category::find($this->category_id)->announcements()->create($this->validate());
+        $announcement= Announcement::all()->sortByDesc('created_at')->first();
+        $announcement->user_id = $this->user_id;
+       
+        $announcement->save();
       
         if(count($this->images)!==0){
 
