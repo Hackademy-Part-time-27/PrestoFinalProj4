@@ -430,3 +430,22 @@ nav {
     }
 }
 */
+
+.img-edited {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    margin-right: 3%;
+}
+
+.border-custom {
+    border: 1px solid ;
+    border-color: var(--alpha-color);
+    border-radius: 4px;
+
+}
+
+.d-flex-custom{
+  width: fit-content;
+  height: min-content;
+}

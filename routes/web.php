@@ -38,3 +38,5 @@ Route::post('/revisor/form',[RevisorController::class,'post'])->name('revisor.po
 Route::get('/Accepting/Revisor/{email}', [RevisorController::class, 'MakeRevisor'])->name('revisor.make');
 //Route for deleting last Revisor task
 Route::get('/getBack', [RevisorController::class, 'getBack'])->name('revisor.getBack');
+
+Route::post('/lingua/{lang}', [FrontController::class, 'setLanguage'])->name('setLocale');
