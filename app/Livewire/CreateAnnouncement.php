@@ -93,7 +93,7 @@ class CreateAnnouncement extends Component
  
         session()->flash('success','Annuncio creato correttamente');
 
-        //$this->clear();
+        $this->clear();
 
     }
 

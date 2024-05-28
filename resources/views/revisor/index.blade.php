@@ -2,7 +2,7 @@
 <div class="row bg-2 m-0 py-4 w-100">
     <div class="col-md-8 mx-auto py-4 " >  
         <h1>
-            {{$announcement_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}}
+            {{$announcement_to_check ? __('ui.revisor_ads_page_text')  : __('ui.no_revisor_ads_page_text') }}
         </h1>
         <div class="col-4">
         @if(session()->has('message'))
@@ -19,7 +19,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-12 text-center">
                 <div>
-                    <a class="btn btn-xl btn-secondary text-decoration-none " href="{{ route('revisor.getBack') }}">Torna indietro all'ultimo annuncio</a>
+                    <a class="btn btn-xl btn-secondary text-decoration-none " href="{{ route('revisor.getBack') }}">{{__('ui.come_back_button') }}</a>
                 </div>
                 </div>
             </div>
@@ -59,9 +59,9 @@
                         </button>
                 </div>
                 <div class="mt-2">
-                    <h3>Titolo: {{ $announcement_to_check->title }}</h3>
-                    <p>Descrizione: {{ $announcement_to_check->body }} </p>
-                    <p>Pubblicato il: {{ $announcement_to_check->created_at->format('D/m/Y') }} </p>
+                    <h3>{{__('ui.revisor_ads_title') }}{{ $announcement_to_check->title }}</h3>
+                    <p>{{__('ui.revisor_ads_description') }} {{ $announcement_to_check->body }} </p>
+                    <p>{{__('ui.ads_published') }} {{ $announcement_to_check->created_at->format('D/m/Y') }} </p>
                 </div>
             </div>
         </div>
@@ -72,19 +72,19 @@
                         <form action="{{ route('revisor.accept_announcement',['announcement' => $announcement_to_check]) }}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button class="btn btn-success" type="submit">Accetta</button>                        
+                            <button class="btn btn-success" type="submit">{{__('ui.revisor_accept') }}</button>                        
                         </form>
                     </div>
                     <div class="col">
                         <form action="{{ route('revisor.reject_announcement',['announcement' => $announcement_to_check]) }}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button class="btn btn-danger" type="submit">Rifiuta</button>                        
+                            <button class="btn btn-danger" type="submit">{{__('ui.revisor_refuse') }}</button>                        
                         </form>
                     </div>
                     <div class="col">
                     <div>
-                        <a class="btn btn-xl btn-secondary text-decoration-none " href="{{ route('revisor.getBack') }}">Torna indietro all'ultimo annuncio</a>
+                        <a class="btn btn-xl btn-secondary text-decoration-none " href="{{ route('revisor.getBack') }}">{{__('ui.come_back_button') }}</a>
                     </div>
                     </div>
                 </div>
