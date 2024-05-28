@@ -11,19 +11,28 @@
    <div class="row ">
         <div class="col-12 mx-auto">
             <div id="showCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner ">
-                     <div class="carousel-item active ">
-                         <img src="https://picsum.photos/id/1/200/300" class="img-fluid w-30 rounded" alt="">
-                     </div>
-                     <div class="carousel-item ">
-                         <img src="https://picsum.photos/id/3/200/300" class="img-fluid p-3 rounded" alt="">
-                     </div>
-                     <div class="carousel-item ">
-                         <img src="https://picsum.photos/id/2/200/300" class="img-fluid p-3 rounded" alt="">
-                     </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#showCarousel"
-              data-bs-slide="prev">
+                <div class="carousel-inner">
+                  @if($announcement->images)
+                      @foreach($announcement->images as $key => $image)
+                      <div class="carousel-item @if($key==0) active @endif ">
+                          <img src="{{Storage::url($image->path)}}" class="img-fluid w-30 rounded" alt="">
+                      </div>
+                     @endforeach
+
+                  @else  
+                    <div class="carousel-item active">
+                        <img class="img-fluid" src="https://picsum.photos/200/300?grayscale" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="img-fluid" src="https://picsum.photos/200/300?grayscale" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="img-fluid" src="https://picsum.photos/200/300?grayscale" class="d-block w-100" alt="...">
+                    </div>
+                  @endif
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#showCarousel"
+                data-bs-slide="prev">
                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
                  <span class="visually-hidden">Next</span>
               </button>
