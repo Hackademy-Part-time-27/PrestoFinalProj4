@@ -26,9 +26,10 @@ public function categoryShow(Category $category){
 }
 
 public function indexForCategory(Category $category)
-{
+{ 
     $announcements=$category->announcements();
-    $announcements=  $announcements->where('is_accepted', true)->paginate(10);
+    $announcements=$announcements->where('is_accepted', true)->paginate(10);
+  
 
     return view('announcement.categoriesView',[
         'category'=>$category,
@@ -55,5 +56,6 @@ public function setLanguage($lang)
    session()->put('locale', $lang);
    return redirect()->back();
 }
+
 
 }
