@@ -28,5 +28,8 @@ return [
     'revisor_refuse' => 'Refuse',
     'revisor_ads_title' => 'title:',
     'revisor_ads_description' => 'description:',
+    'login_text' => 'Login with your account!',
+    'login_button' => 'Log in',
+
     
 ];
