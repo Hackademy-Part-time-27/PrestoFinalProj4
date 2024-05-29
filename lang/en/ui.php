@@ -16,6 +16,17 @@ return [
     'navbar_search' => 'Search',
     'ads_view' => 'view',
     'ads_published' => 'published on:',
-
-
+    'support_page' => 'Presto.it support',
+    'support_page_text' => 'CONTACT US FOR ANY INFORMATION!',
+    'support_page_message' => 'message',
+    'support_page_button' => 'send',
+    'ads_page_text' => 'here are our announcements!',
+    'revisor_ads_page_text' => 'Here\'s the ad for review',
+    'no_revisor_ads_page_text' => 'Here\'s the ad for review',
+    'come_back_button' => 'go back to the last ad',
+    'revisor_accept' => 'Accept',
+    'revisor_refuse' => 'Refuse',
+    'revisor_ads_title' => 'title:',
+    'revisor_ads_description' => 'description:',
+    
 ];

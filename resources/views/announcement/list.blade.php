@@ -1,8 +1,8 @@
 <x-layout>
     <div class="row bg-2 m-0 py-4 w-100">
         <div class="col-md-8 mx-auto py-4 " >  
-                <h1>Benvenuto su <span class="text-3 ">{{ config('app.name') }}</span></h1>
-                <h2>Ecco i nostri Annunci</h2>
+                <h1 class="text-3">{{__('ui.welcome') }} </h1>
+                <h2>{{__('ui.ads_page_text') }} </h2>
         </div>
     </div>
     <div class="container-fluid mt-5 ">
@@ -23,11 +23,11 @@
                                             <span class="text-end "><p class="card-text fs-3 text-danger pe-4 ">{{Number::currency($announcement->price, in: 'EUR', locale: 'de')}}</p></span>
                                             
                                             <div class="my-4">
-                                                <a href="{{ route('announcements.show', ['announcement' => $announcement->id]) }}" class="btn-custom text-decoration-none fs-4">Visualizza</a>
+                                                <a href="{{ route('announcements.show', ['announcement' => $announcement->id]) }}" class="btn-custom text-decoration-none fs-4">{{__('ui.ads_view') }} </a>
                                             </div>
                                         
                                             <div class="d-flex justify-content-end text-end pe-3 mb-0">
-                                                <p class="card-footer fs-6">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}}</p>
+                                                <p class="card-footer fs-6">{{__('ui.ads_published') }}  {{$announcement->created_at->format('d/m/Y')}}</p>
                                             </div> 
                                         </div>
                                 </div>
