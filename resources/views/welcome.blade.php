@@ -27,23 +27,27 @@
             <a class="btn-custom text-decoration-none fs-4" href="{{ route('announcement.create') }}">{{__('ui.create_ads') }}</a>
         </div>
     </div>
-</div>
-<div class="container-fluid mt-5 ">
-    <div class="row justify-content-center">
-        <div class="col-12">
-            <div class="container-sm">
-                <div class="row justify-content-center">
-                    @foreach($announcements as $announcement)
-                        <div class="col-4 mb-4">
-                            <div class="card-custom mx-4 my-3">
-                                    <div class="div-img">
-                                        <img class="img-fluid rounded-1 w-100" src="{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()->path) : 'https://picsum.photos/200)' }}" class="card-img-top p-3 rounded" alt="...">
-                                    </div>
-                                    <div class="text-start pt-2 div-text-card " >
-                                        <h2 class="card-title text-3 border-bttm">{{$announcement->title}}</h2>
-                                        <p class="card-text fs-4 text-danger ">{{ $announcement->category->name}} </p>
-                                        <p class="card-text fs-5 border-bttm">{{$announcement->body}}</p>
-                                        <span class="text-end "><p class="card-text fs-3 text-danger pe-4 ">{{Number::currency($announcement->price, in: 'EUR', locale: 'de')}}</p></span>
+    <div class="container-fluid mt-5 ">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="container-sm">
+                    <div class="row justify-content-center">
+                        @foreach($announcements as $announcement)
+                        
+                            <div class="col-4 mb-4">
+                                <div class="card-custom mx-4 my-3">
+                                        <div class="div-img">
+                                            <img class="img-fluid rounded-1 w-100" src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(300,300) : 'https://picsum.photos/200' }}" class="card-img-top p-3 rounded" alt="...">
+                                        </div>
+                                        <div class="text-start pt-2 div-text-card " >
+                                            <h2 class="card-title text-3 border-bttm">{{$announcement->title}}</h2>
+                                            <p class="card-text fs-4 text-danger ">{{ $announcement->category->name}} </p>
+                                            <p class="card-text fs-5 border-bttm">{{$announcement->body}}</p>
+                                            <span class="text-end "><p class="card-text fs-3 text-danger pe-4 ">{{Number::currency($announcement->price, in: 'EUR', locale: 'de')}}</p></span>
+                                            
+                                            <div class="my-4">
+                                                <a href="{{ route('announcements.show', ['announcement' => $announcement->id]) }}" class="btn-custom text-decoration-none fs-4">{{__('ui.ads_view') }}</a>
+                                            </div>
                                         
                                         <div class="my-4">
                                             <a href="{{ route('announcements.show', ['announcement' => $announcement->id]) }}" class="btn-custom text-decoration-none fs-4 ">{{__('ui.ads_view') }}</a>
