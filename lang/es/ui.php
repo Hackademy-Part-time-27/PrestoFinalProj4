@@ -28,4 +28,6 @@ return [
     'revisor_refuse' => 'Rechazar',
     'revisor_ads_title' => 'título:',
     'revisor_ads_description' => 'descripción:',
+    'login_text' => '¡Inicia sesión con tu cuenta!',
+    'login_button' => 'Acceso',
 ];

@@ -4,7 +4,7 @@
     <div class="row">
 
         <div class="col-md-6 mx-auto mt-4">
-            <h1>Accedi con il tuo Account</h1>
+            <h1>{{__('ui.login_text') }}</h1>
 
             <div class="mt-5 ">
                 <form action="/login" method="POST">
@@ -21,7 +21,7 @@
                             @error('password') <span class="small text-danger fs-6">{{ $message }}</span> @enderror
                         </div>
                         <div class="col-12">
-                            <button type="submit" class="btn-custom">Accedi</button>
+                            <button type="submit" class="btn-custom">{{__('ui.login_button') }}</button>
                         </div>
                     </div>
                 </form>

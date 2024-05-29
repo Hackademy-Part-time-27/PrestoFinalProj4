@@ -28,4 +28,7 @@ return [
     'revisor_refuse' => 'Rifiuta',
     'revisor_ads_title' => 'titolo:',
     'revisor_ads_description' => 'descrizione:',
+    'login_text' => 'Accedi con il tuo account!',
+    'login_button' => 'Accedi',
+
 ];
