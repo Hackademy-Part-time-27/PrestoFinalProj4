@@ -92,7 +92,7 @@
             @endauth
             <form action="{{ route('announcements.search') }}" method="GET" class="d-flex w-75 ms-4">
                 <input name="searched" class="form-control me-2 fs-4" type="search" placeholder="Search" aria-label="search">
-                <button class="btn btn-outline-success fs-4" type="submit"> {{__('ui.navbar_search') }}</button>
+                <button class=" fs-4 btn-search" type="submit"> {{__('ui.navbar_search') }}</button>
             </form>
         </ul>
     </div>

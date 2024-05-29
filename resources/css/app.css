@@ -449,3 +449,15 @@ nav {
   width: fit-content;
   height: min-content;
 }
+
+.btn-search{
+    border: 1px solid var(--text-color-3);
+    border-radius: 7px;
+    background-color: var(--alpha-color-2);
+    color: var(--text-color);
+}
+
+.btn-search:hover {
+    background-color: var(--text-color-3);
+    color: black;
+}
