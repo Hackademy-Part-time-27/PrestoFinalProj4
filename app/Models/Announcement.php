@@ -13,15 +13,16 @@ class Announcement extends Model
  protected $fillable=['title','body','price','user_id','category_id'];
 
 
- public function toSearchableArray(){
-$category=$this->category;
-$array = [
-'id' => $this->id,
-'title' => $this->title,
-'body' => $this->body,
-'category' => $category,
-];
-return $array;
+ public function toSearchableArray()
+ {
+    $category = $this->category;
+    $array = [
+    'id' => $this->id,
+    'title' => $this->title,
+    'body' => $this->body,
+    'category' => $category,
+    ];
+    return $array;
  }
 
     public function category(){

@@ -33,7 +33,7 @@
                         @if($announcement_to_check->images)
                             @foreach($announcement_to_check->images as $key => $image)
                                 <div class="carousel-item @if($key == 0) active @endif text-center">
-                                    <img class="img-fluid" style="width:300px; height:auto;" src="{{ Storage::url($image->path)  }}" class="d-block w-100" alt="...">
+                                    <img class="img-fluid" style="width:300px; height:auto;" src="{{ $image->getUrl(2400,2400)  }}" class="d-block w-100" alt="...">
                                 </div>
                             @endforeach
                         @else
