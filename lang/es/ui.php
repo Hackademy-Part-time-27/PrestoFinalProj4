@@ -27,7 +27,38 @@ return [
     'revisor_accept' => 'Aceptar',
     'revisor_refuse' => 'Rechazar',
     'revisor_ads_title' => 'título:',
+    'ads_title' => 'título',
     'revisor_ads_description' => 'descripción:',
+    'ads_create_text' => 'CREAR UN NUEVO ANUNCIO',
+    'ads_description' => 'descripción',
+    'ads_price' => 'precio',
+    'ads_image' => 'imagen',
+    'ads_preview_image' => 'imagen de previa',
+    'ads_create_button' => 'Crear',
     'login_text' => '¡Inicia sesión con tu cuenta!',
     'login_button' => 'Acceso',
+    'register_text' => '¡BIENVENIDO, REGÍSTRESE AQUÍ!',
+    'register_name_text' => 'nombre',
+    'category_name_text' => 'nombre',
+    'category_delete' => 'ELIMINAR',
+    'category_edit' => 'editar',
+    'register_password_confirmation' => 'confirmar PASSWORD',
+    'register_button' => 'registrarse',
+    'create_category_text' => 'CREAR UNA NUEVA CATEGORÍA',
+    'create_category_name' => 'nombre categoría',
+    'create_category_button' => 'Crear',
+    'category_name' => 'categoría',
+    'category_name_page' => 'categorias',
+    'category_view_text' => 'Aquí están los anuncios de la categoría:',
+    'no_category_view_text' => '¡No hay anuncios para esta categoría!',
+    'create_category_view_text' => '¿Quieres crear un anuncio para la categoría',
+    'search_ads' => 'No hay anuncios para estos campos. ¡Trata de cambiar!',
+    'mail_revisor_text' => 'TRABAJA CON NOSOTROS',
+    'mail_revisor_button' => '  Conviértete en auditor',
+    'works_as_an_auditor' => '¡Trabaja como revisor!',
+
+
+  
+    
+    
 ];

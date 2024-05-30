@@ -53,9 +53,6 @@ return [
     'no_category_view_text' => 'Non sono presenti Annunci per questa categoria',
     'create_category_view_text' => 'Vuoi creare un annuncio per la categoria',
     'search_ads' => 'Non ci sono annunci per questi campi. Prova a cambiare!',
-    'mail_revisor_text' => 'LAVORA CON NOI',
-    'mail_revisor_button' => 'Diventa Revisore',
-    'works_as_an_auditor' => 'lavora come revisore!'
     
     
     

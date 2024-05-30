@@ -85,7 +85,7 @@
             </li>
             @else
             <li class="nav-item me-4">
-                <a class="nav-link hover text-3 " href="/register">Registrati</a>
+                <a class="nav-link hover text-3 " href="/register">{{__('ui.register_button') }}</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link hover" href="/login">Login</a>
