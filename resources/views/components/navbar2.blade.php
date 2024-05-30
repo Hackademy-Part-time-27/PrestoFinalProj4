@@ -51,7 +51,10 @@
                         <li  class="border-bttm text-center" ><a class="dropdown-element" ><x-_locale lang="en"></x-_locale></a></li>
                         <li  class="border-bttm text-center"><a class="dropdown-element " ><x-_locale lang="es"></x-_locale></a></li>
                         <li  class="border-bttm text-center"><a class="dropdown-element " ><x-_locale lang="fr"></x-_locale></a></li>
-                        <li  class=" text-center"><a class="dropdown-element " ><x-_locale lang="de"></x-_locale></a></li>
+                        <li  class="border-bttm text-center"><a class="dropdown-element " ><x-_locale lang="de"></x-_locale></a></li>
+                        <li  class="border-bttm text-center"><a class="dropdown-element " ><x-_locale lang="pt"></x-_locale></a></li>
+                        <li  class="border-bttm text-center"><a class="dropdown-element " ><x-_locale lang="ru"></x-_locale></a></li>
+                        <li  class=" text-center"><a class="dropdown-element " ><x-_locale lang="ja"></x-_locale></a></li>
                     </ul>
             </li>
         </ul>
