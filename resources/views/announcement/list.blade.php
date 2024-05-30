@@ -35,7 +35,7 @@
                         @empty
                             <div class="col-12 w-50 mt-5 text-center">
                                 <div class="alert alert-warning  py-3 shadow text-center">
-                                    <p class="lead">Non ci sono annunci per questi campi. Prova a cambiare!</p>
+                                    <p class="lead">{{__('ui.search_ads') }}</p>
                                 </div>
                             </div>
                         @endforelse

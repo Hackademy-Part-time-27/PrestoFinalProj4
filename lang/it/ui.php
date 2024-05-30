@@ -27,8 +27,38 @@ return [
     'revisor_accept' => 'Accetta',
     'revisor_refuse' => 'Rifiuta',
     'revisor_ads_title' => 'titolo:',
+    'ads_title' => 'titolo',
     'revisor_ads_description' => 'descrizione:',
+    'ads_create_text' => 'CREA UN NUOVO ANNUNCIO',
+    'ads_description' => 'descrizione',
+    'ads_price' => 'prezzo',
+    'ads_image' => 'immagine',
+    'ads_preview_image' => 'Anteprima immagine',
+    'ads_create_button' => 'Crea',
     'login_text' => 'Accedi con il tuo account!',
     'login_button' => 'Accedi',
+    'register_text' => 'BENVENUTO, REGISTRATI QUI!',
+    'register_name_text' => 'nome',
+    'category_name_text' => 'nome',
+    'category_delete' => 'ELIMINA',
+    'category_edit' => 'modifica',
+    'register_password_confirmation' => 'conferma password',
+    'register_button' => 'registrati',
+    'create_category_text' => 'Crea una nuova categoria',
+    'create_category_name' => 'nome categoria',
+    'create_category_button' => 'Crea ',
+    'category_name' => 'categoria',
+    'category_name_page' => 'categorie',
+    'category_view_text' => 'Ecco gli annunci per la categoria:',
+    'no_category_view_text' => 'Non sono presenti Annunci per questa categoria',
+    'create_category_view_text' => 'Vuoi creare un annuncio per la categoria',
+    'search_ads' => 'Non ci sono annunci per questi campi. Prova a cambiare!',
+    'mail_revisor_text' => 'LAVORA CON NOI',
+    'mail_revisor_button' => 'Diventa Revisore',
+    'works_as_an_auditor' => 'lavora come revisore!'
+    
+    
+    
+    
 
 ];
