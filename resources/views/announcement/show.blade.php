@@ -51,7 +51,7 @@
                 <h3 class="card-title text-3">{{$announcement->title}}</h3>
                 <p class="card-text">{{$announcement->body}}</p>
                 <p class="card-text text-3">{{Number::currency($announcement->price, in: 'EUR', locale: 'de')}}</p>
-                <a href="{{route('announcements.category-filter',['category'=>$announcement->category])}}" class="my-2 border-top pt-2 border-dark card-link sadow btn-btn-success">Categoria: {{$announcement->category->name}}</a>
+                <a href="{{route('announcements.category-filter',['category'=>$announcement->category])}}" class="my-2 border-top pt-2 border-dark card-link sadow btn-btn-success">{{__('ui.category_name') }}: {{$announcement->category->name}}</a>
               </div>
       </div>
   </div>

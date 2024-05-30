@@ -4,7 +4,7 @@
     <div class="row">
 
         <div class="col-md-6 mx-auto mt-4">
-            <h1> Lavora Con Noi</h1>
+            <h1>{{__('ui.mail_revisor_text') }}</h1>
             <div class="my-2">
                 @if(session()->has('message'))
                 <div class="alert alert-success">
@@ -29,7 +29,7 @@
                         </div>
                        
                         <div class="col-12">
-                            <button type="submit" class="btn-custom">Diventa Revisore</button>
+                            <button type="submit" class="btn-custom">{{__('ui.mail_revisor_button') }}</button>
                         </div>
                     </div>
                 </form>

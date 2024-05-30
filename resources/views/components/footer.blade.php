@@ -4,7 +4,7 @@
             <div class="col-md-6 text-center">
                    <h3>Fai presto.it</h3>
                    <div class="mt-2">
-                   <a class="btn btn-warning" href="{{ route('revisor.form') }}">Lavora Come Revisore</a>
+                   <a class="btn btn-warning" href="{{ route('revisor.form') }}">{{__('ui.works_as_an_auditor') }}</a>
                    </div>
             </div>
         </div>

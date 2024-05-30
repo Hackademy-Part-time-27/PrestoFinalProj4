@@ -4,14 +4,14 @@
             <div class="my-4">
                 <h1>Categorie</h1>
                 <div class="text-end">
-                    <a class="btn-custom text-decoration-none my-3" href="{{ route('category.create') }}">Crea Categoria</a>
+                    <a class="btn-custom text-decoration-none my-3" href="{{ route('category.create') }}">{{__('ui.create_category') }}</a>
                 </div>
             </div>
             <div class="mb-3 ">
                 <table class="w-100 fs-3">
                     <thead>
                         <th>#</th>
-                        <th>Nome</th>
+                        <th>{{__('ui.category_name_text') }}</th>
                         <th></th>
                     </thead>
                     <tbody>
@@ -24,7 +24,7 @@
                                     <form class="d-inline ms-2" action="" method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-danger btn-sm">Elimina</button>
+                                        <button type="submit" class="btn btn-danger btn-sm">{{__('ui.category_delete') }}</button>
                                     </form>
                                 </td>
                             </tr>
