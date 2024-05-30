@@ -478,7 +478,7 @@ nav {
 .card-swipe{
     transform: translateY(400px);
     opacity:0;
-    transition: all 1s ease-out;
+    transition: all 1s ease-in;
 }
 
 .card-swipe.swipe{
