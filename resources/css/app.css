@@ -141,6 +141,20 @@ nav {
     background-color: var(--color);
     color: var(--text-color) !important;
     background-color: var(--color-bg);
+    position: sticky !important;
+    width: 100%;
+    top: 0px;
+    z-index: 100;
+}
+
+.nav-size{
+    min-height:150px;
+    transition: all 0.2s ease-in;
+}
+
+.nav-size.scrolled{
+    min-height: 90px;
+    transition: all 0.2s ease-in;
 }
 
 nav ul li a {
@@ -459,4 +473,15 @@ nav {
 .btn-search:hover {
     background-color: var(--text-color-3);
     color: black;
+}
+
+.card-swipe{
+    transform: translateY(400px);
+    opacity:0;
+    transition: all 1s ease-out;
+}
+
+.card-swipe.swipe{
+    transform: translateY(0px);
+    opacity: 1;
 }
