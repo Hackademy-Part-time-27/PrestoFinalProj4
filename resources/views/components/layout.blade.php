@@ -29,6 +29,7 @@
     
     <x-footer/>
 <script>
+
     let title =localStorage.getItem('data-theme')
     
     setAttrribute()
@@ -70,6 +71,9 @@
     function closeModal(){
         modal.style.display='none';
     }
+
+
+    
 </script>
 </body>
 </html>

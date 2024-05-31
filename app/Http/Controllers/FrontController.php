@@ -26,9 +26,10 @@ public function categoryShow(Category $category){
 }
 
 public function indexForCategory(Category $category)
-{
+{ 
     $announcements=$category->announcements();
-    $announcements=  $announcements->where('is_accepted', true)->paginate(10);
+    $announcements=$announcements->where('is_accepted', true)->paginate(10);
+  
 
     return view('announcement.categoriesView',[
         'category'=>$category,
@@ -38,7 +39,7 @@ public function indexForCategory(Category $category)
 
 public function searchAnnouncements (Request $request)
 {
-    $announcements = Announcement::search( $request->searched)->where('is_accepted', true)->paginate(10);
+    $announcements = Announcement::search($request->searched)->where('is_accepted', true)->paginate(10);
     return view('announcement.list', compact ('announcements'));
 }
 
@@ -55,5 +56,6 @@ public function setLanguage($lang)
    session()->put('locale', $lang);
    return redirect()->back();
 }
+
 
 }

@@ -6,44 +6,58 @@
         </div> 
   </div>  
 </div>
-
 <div class="container">
-   <div class="row ">
-        <div class="col-12 mx-auto">
-            <div id="showCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  @if($announcement->images)
-                      @foreach($announcement->images as $key => $image)
-                      <div class="carousel-item @if($key==0) active @endif ">
-                          <img src="{{Storage::url($image->path)}}" class="img-fluid w-30 rounded" alt="">
-                      </div>
-                     @endforeach
-
-                  @else  
-                    <div class="carousel-item active">
-                        <img class="img-fluid" src="https://picsum.photos/200/300?grayscale" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="img-fluid" src="https://picsum.photos/200/300?grayscale" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="img-fluid" src="https://picsum.photos/200/300?grayscale" class="d-block w-100" alt="...">
-                    </div>
-                  @endif
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#showCarousel"
-                data-bs-slide="prev">
-                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                 <span class="visually-hidden">Next</span>
-              </button>
+  <div class="row justify-content-center">
+    <div class="col-12 text-center">
+      <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-              <h5 class="card-title">Titolo {{$announcement->title}}</h5>
-              <p class="card-text">Descrizione: {{$announcement->body}}</p>
-              <p class="card-text">Prezzo: {{$announcement->price}}</p>
-              <a href="{{route('announcements.category-filter',['category'=>$announcement->category])}}" class="my-2 border-top pt-2 border-dark card-link sadow btn-btn-success">Categoria: {{$announcement->category->name}}</a>
-         
-        </div>
+            <div class="carousel-inner">
+              @if(!$announcement->images()->get()->isEmpty())
+                  @foreach($announcement->images as $key =>$image)
+                    <div class="carousel-item text-center  @if($key==0)active @endif">
+                      <img style="width: 24rem;" src="{{ Storage::url($image->path)}}" class="" alt="...">
+                    </div>
+                  @endforeach
+              @else
+              <div class="carousel-item active">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+              @endif
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+      </div>
     </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <div class="text-center fs-4">
+                <h3 class="card-title text-3">{{$announcement->title}}</h3>
+                <p class="card-text">{{$announcement->body}}</p>
+                <p class="card-text text-3">{{Number::currency($announcement->price, in: 'EUR', locale: 'de')}}</p>
+                <a href="{{route('announcements.category-filter',['category'=>$announcement->category])}}" class="my-2 border-top pt-2 border-dark card-link sadow btn-btn-success">{{__('ui.category_name') }}: {{$announcement->category->name}}</a>
+              </div>
+      </div>
+  </div>
 </div>
+
+
+
 </x-layout>
 

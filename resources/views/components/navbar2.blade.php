@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg border-bttm">
+<nav class="navbar navbar-expand-lg border-bttm nav-size" id="nav">
   <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -6,7 +6,7 @@
     <div class="collapse navbar-collapse justify-content-between " id="navbarNavDropdown">
        
         <ul class="navbar-nav fs-4 w-50 align-items-center align-content-center">
-            <li class="nav-item me-5 text-3 fs-3">{{ config('app.name') }}</li>
+            <li class="nav-item me-4"><img class="img-fluid" style="width: 250px; object-fit:contain;" src="{{ asset('./img/Senza titolo-1.png') }}" alt=""></li>
             <li class="nav-item me-4">
                 <a class="nav-link hover" aria-current="page" href="{{ route('welcome') }}">Home</a>
             </li>
@@ -49,7 +49,12 @@
                         </li>
                         <li class="border-bttm text-center"><a class="dropdown-element "><x-_locale lang="it"></x-_locale></a></li>
                         <li  class="border-bttm text-center" ><a class="dropdown-element" ><x-_locale lang="en"></x-_locale></a></li>
-                        <li  class=" text-center"><a class="dropdown-element " ><x-_locale lang="es"></x-_locale></a></li>
+                        <li  class="border-bttm text-center"><a class="dropdown-element " ><x-_locale lang="es"></x-_locale></a></li>
+                        <li  class="border-bttm text-center"><a class="dropdown-element " ><x-_locale lang="fr"></x-_locale></a></li>
+                        <li  class="border-bttm text-center"><a class="dropdown-element " ><x-_locale lang="de"></x-_locale></a></li>
+                        <li  class="border-bttm text-center"><a class="dropdown-element " ><x-_locale lang="pt"></x-_locale></a></li>
+                        <li  class="border-bttm text-center"><a class="dropdown-element " ><x-_locale lang="ru"></x-_locale></a></li>
+                        <li  class=" text-center"><a class="dropdown-element " ><x-_locale lang="ja"></x-_locale></a></li>
                     </ul>
             </li>
         </ul>
@@ -62,8 +67,8 @@
 
         <ul class="navbar-nav justify-content-end align-items-center w-25 fs-4 ">
        
-             <li onclick="changeMode()" id="light" class="hover nav-item me-4 light"><span class="material-symbols-outlined position-light ">light_mode</span></li>
-             <li onclick="changeMode()" id="night" class="me-4 hover nav-item dark"><span class="material-symbols-outlined position-dark">mode_night</span></li>
+             <li onclick="changeMode()" id="light" class="hover2 nav-item me-4 light"><span class="material-symbols-outlined position-light ">light_mode</span></li>
+             <li onclick="changeMode()" id="night" class="me-4 hover2 nav-item dark"><span class="material-symbols-outlined position-dark">mode_night</span></li>
             @auth
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle hover" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -83,7 +88,7 @@
             </li>
             @else
             <li class="nav-item me-4">
-                <a class="nav-link hover text-3 " href="/register">Registrati</a>
+                <a class="nav-link hover text-3 " href="/register">{{__('ui.register_button') }}</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link hover" href="/login">Login</a>
@@ -92,7 +97,7 @@
             @endauth
             <form action="{{ route('announcements.search') }}" method="GET" class="d-flex w-75 ms-4">
                 <input name="searched" class="form-control me-2 fs-4" type="search" placeholder="Search" aria-label="search">
-                <button class="btn btn-outline-success fs-4" type="submit"> {{__('ui.navbar_search') }}</button>
+                <button class=" fs-4 btn-search" type="submit"> {{__('ui.navbar_search') }}</button>
             </form>
         </ul>
     </div>
