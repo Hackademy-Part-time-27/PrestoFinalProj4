@@ -487,8 +487,13 @@ nav {
 
 .card-swipe {
     transform: translateY(400px);
+<<<<<<< HEAD
     opacity: 0;
     transition: all 1s ease-out;
+=======
+    opacity:0;
+    transition: all 1s ease-in;
+>>>>>>> bae920a8704b219e432b76ccbcbb31d510095807
 }
 
 .card-swipe.swipe {

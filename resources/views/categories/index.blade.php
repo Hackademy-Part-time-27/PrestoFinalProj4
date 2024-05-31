@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-9 mx-auto">
             <div class="my-4">
-                <h1>{{__('ui.category_name_page') }}</h1>
+                <h1>Categorie</h1>
                 <div class="text-end">
                     <a class="btn-custom text-decoration-none my-3" href="{{ route('category.create') }}">{{__('ui.create_category') }}</a>
                 </div>
@@ -20,7 +20,7 @@
                                 <td class="col">{{ $category->id }}</td>
                                 <td class="col">{{ $category->name }}</td>
                                 <td class="text-start mx-auto col">
-                                    <a href="" class="btn btn-secondary btn-sm">{{__('ui.category_edit') }}</a>
+                                    <a href="" class="btn btn-secondary btn-sm">modifica</a>
                                     <form class="d-inline ms-2" action="" method="POST">
                                         @csrf
                                         @method('DELETE')
