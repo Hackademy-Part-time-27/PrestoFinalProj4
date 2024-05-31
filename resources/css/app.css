@@ -498,13 +498,8 @@ nav {
 
 .card-swipe {
     transform: translateY(400px);
-<<<<<<< HEAD
     opacity: 0;
     transition: all 1s ease-out;
-=======
-    opacity:0;
-    transition: all 1s ease-in;
->>>>>>> bae920a8704b219e432b76ccbcbb31d510095807
 }
 
 .card-swipe.swipe {
@@ -513,12 +508,8 @@ nav {
 }
 
 
-<<<<<<< HEAD
 
 
-
-  
-=======
 .footer-col h4 {
     font-size: 18px;
     color: #ffffff;
@@ -581,4 +572,4 @@ nav {
     color: #24262b;
     background-color: #ffffff;
 }
->>>>>>> 8cc328264a153a62eff5c3f673886441e89df6f7
+  
