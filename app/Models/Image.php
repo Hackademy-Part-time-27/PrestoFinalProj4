@@ -12,7 +12,7 @@ class Image extends Model
 
     protected $fillable = ['path', 'announcements_id'];
 
-    public function announcements()
+    public function announcement()
     {
         return $this->belongsTo(Announcement::class);
     }

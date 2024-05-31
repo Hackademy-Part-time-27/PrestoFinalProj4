@@ -161,8 +161,20 @@ nav ul li a {
     color: var(--text-color) !important;
 }
 
+.hover {
+    border: 1px solid transparent;
+}
 
 .hover:hover {
+    border: 1px solid var(--text-color-3);
+    border-radius: 4px;
+    background-color: var(--text-color-3);
+    cursor: pointer;
+    color: var(--color-bg-2) !important;
+    transition: all 0.2s ease-out;
+}
+
+.hover2:hover {
     opacity: 0.5;
     cursor: pointer;
 }
@@ -497,6 +509,8 @@ nav {
 }
 
 
+
+
 .footer-col h4 {
     font-size: 18px;
     color: #ffffff;
@@ -552,6 +566,7 @@ nav {
     color: #ffffff;
     transition: all 0.5s ease;
 
+    text-decoration: none;
 
 }
 
