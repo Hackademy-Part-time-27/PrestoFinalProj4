@@ -4,6 +4,11 @@
                 <h1 class="text-3">{{__('ui.welcome') }} </h1>
                 <h2>{{__('ui.ads_page_text') }} </h2>
         </div>
+        <div class="col-md-2 py-4">
+        <div>
+            <a class="btn-custom text-decoration-none fs-4" href="{{ route('announcement.create') }}">{{__('ui.create_ads') }}</a>
+        </div>
+    </div>
     </div>
     <div class="container-fluid mt-5 ">
         <div class="row justify-content-start">
