@@ -6,7 +6,7 @@
     <div class="collapse navbar-collapse justify-content-between " id="navbarNavDropdown">
        
         <ul class="navbar-nav fs-4 w-50 align-items-center align-content-center">
-            <li class="nav-item me-5 text-3 fs-3">{{ config('app.name') }}</li>
+            <li class="nav-item me-4"><img class="img-fluid" style="width: 250px; object-fit:contain;" src="{{ asset('./img/Senza titolo-1.png') }}" alt=""></li>
             <li class="nav-item me-4">
                 <a class="nav-link hover" aria-current="page" href="{{ route('welcome') }}">Home</a>
             </li>
@@ -67,8 +67,8 @@
 
         <ul class="navbar-nav justify-content-end align-items-center w-25 fs-4 ">
        
-             <li onclick="changeMode()" id="light" class="hover nav-item me-4 light"><span class="material-symbols-outlined position-light ">light_mode</span></li>
-             <li onclick="changeMode()" id="night" class="me-4 hover nav-item dark"><span class="material-symbols-outlined position-dark">mode_night</span></li>
+             <li onclick="changeMode()" id="light" class="hover2 nav-item me-4 light"><span class="material-symbols-outlined position-light ">light_mode</span></li>
+             <li onclick="changeMode()" id="night" class="me-4 hover2 nav-item dark"><span class="material-symbols-outlined position-dark">mode_night</span></li>
             @auth
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle hover" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

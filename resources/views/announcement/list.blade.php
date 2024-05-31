@@ -4,6 +4,11 @@
                 <h1 class="text-3">{{__('ui.welcome') }} </h1>
                 <h2>{{__('ui.ads_page_text') }} </h2>
         </div>
+        <div class="col-md-2 py-4">
+        <div>
+            <a class="btn-custom text-decoration-none fs-4" href="{{ route('announcement.create') }}">{{__('ui.create_ads') }}</a>
+        </div>
+    </div>
     </div>
     <div class="container-fluid mt-5 ">
         <div class="row justify-content-start">
@@ -14,13 +19,13 @@
                             <div class="col-4 mb-4 ">
                                 <div class="card-custom mx-4 my-3 card-swipe" id="card">
                                         <div class="div-img">
-                                            <img class="img-fluid rounded-1 w-100 ps-0" src="{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()->path) : 'https://picsum.photos/200' }}" class="card-img-top p-3 rounded" alt="...">
+                                            <img class="img-fluid rounded-1 w-100 ps-0" src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(300,300) : 'https://picsum.photos/200' }}" class="card-img-top p-3 rounded" alt="...">
                                         </div>
                                         <div class="text-start pt-2 div-text-card " >
                                             <h2 class="card-title text-3 border-bttm">{{$announcement->title}}</h2>
                                             <p class="card-text fs-4 text-danger ">{{ $announcement->category->name}} </p>
                                             <p class="card-text fs-5 border-bttm">{{$announcement->body}}</p>
-                                            <span class="text-end "><p class="card-text fs-3 text-danger pe-4 ">{{Number::currency($announcement->price, in: 'EUR', locale: 'de')}}</p></span>
+                                            <span class="text-end"><p class="card-text fs-2 text-danger pe-2">{{Number::currency($announcement->price, in: 'EUR', locale: 'de')}}</p></span>
                                             
                                             <div class="my-4">
                                                 <a href="{{ route('announcements.show', ['announcement' => $announcement->id]) }}" class="btn-custom text-decoration-none fs-4">{{__('ui.ads_view') }} </a>
