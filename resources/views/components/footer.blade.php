@@ -1,6 +1,6 @@
 <!-- Footer -->
 <footer style="background-color: #343a40; color: #f8f9fa; padding: 60px 20px; text-align: center; position: relative;margin-top:60px">
-    <!-- Wave Background -->
+    <!-- Wave Background 
     <div style="position: absolute; top: 0; left: 0; width: 100%; overflow: hidden; line-height: 0;">
         <svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="position: relative; display: block; width: calc(132% + 1.3px); height: 100px;">
             <path d="M0,0V46.29c47.31,21.91,98.33,31.13,148.17,34,75.93,4.72,147.62-16.84,223.12-29.52C453.11,33.9,532.63,47.9,607,53.64c68.17,5.29,136.23-9.3,200-24.3,87.22-20.72,172.28-46.21,261-51.8,50.24-3.23,99.71,1.27,148.17,12.58,48.88,11.41,95.9,29.35,142.14,42.27,30.43,8.38,62.77,16.2,94.68,20.22V0Z" opacity=".25" style="fill: #ffffff;"></path>
@@ -8,13 +8,13 @@
             <path d="M0,0V5.63C47.31,24.91,98.33,31.13,148.17,34c75.93,4.72,147.62-16.84,223.12-29.52C453.11,21.9,532.63,35.9,607,41.64c68.17,5.29,136.23-9.3,200-24.3,87.22-20.72,172.28-46.21,261-51.8,50.24-3.23,99.71,1.27,148.17,12.58,48.88,11.41,95.9,29.35,142.14,42.27,30.43,8.38,62.77,16.2,94.68,20.22V0Z" style="fill: #ffffff;"></path>
         </svg>
     </div>
-
+-->
     <div style="max-width: 1200px; margin: 0 auto; padding-top: 60px; position: relative; z-index: 1; ">
         <!-- Top Section -->
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin-bottom: 50px; text-align: left;">
             <!-- About and Logo -->
             <div style="flex: 1; min-width: 300px; margin-bottom: 30px; ">
-                <img src="{{ asset('img/logo.png') }}" alt="Presto.it Logo" style="max-width: 250px; margin-bottom: 20px;">
+                <img src="{{ asset('./img/Senza titolo-1.png') }}" alt="Presto.it Logo" style="max-width: 250px; margin-bottom: 20px;">
                 <p style="font-size: 16px; line-height: 1.6; color: #ced4da;">
                     Presto.it velocità e efficienza. Scopri i nostri servizi e unisciti alla nostra comunità di utenti soddisfatti.
                 </p>
@@ -81,7 +81,7 @@
             </form>
         </div>
 
-        <div class=" text-center">
+        <div class=" text-center mb-3">
                    <h3>Fai presto.it</h3>
                    <div class="mt-2">
                    <a class="btn btn-warning" href="{{ route('revisor.form') }}">{{__('ui.works_as_an_auditor') }}</a>

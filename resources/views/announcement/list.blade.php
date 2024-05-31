@@ -22,9 +22,9 @@
                                             <img class="img-fluid rounded-1 w-100 ps-0" src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(300,300) : 'https://picsum.photos/200' }}" class="card-img-top p-3 rounded" alt="...">
                                         </div>
                                         <div class="text-start pt-2 div-text-card " >
-                                            <h2 class="card-title text-3 border-bttm">{{$announcement->title}}</h2>
+                                            <h2 class="card-title text-3 border-bttm">{{Str::limit($announcement->title, 20)}}</h2>
                                             <p class="card-text fs-4 text-danger ">{{ $announcement->category->name}} </p>
-                                            <p class="card-text fs-5 border-bttm">{{$announcement->body}}</p>
+                                            <p class="card-text fs-5 border-bttm text-truncate">{{$announcement->body}}</p>
                                             <span class="text-end"><p class="card-text fs-2 text-danger pe-2">{{Number::currency($announcement->price, in: 'EUR', locale: 'de')}}</p></span>
                                             
                                             <div class="my-4">

@@ -45,7 +45,7 @@ style="fill:#FFFFFF;">
 
 [data-theme='light'] {
     --color: transparent;
-    --color-bg: #ffffff !important;
+    --color-bg: #F6F5F2 !important;
     --color-bg-2: #EEEEEE !important;
     --text-color: #38414A !important;
     --text-color-2: #758195 !important;
@@ -86,12 +86,6 @@ body {
     color: var(--text-color) !important;
 }
 
-.footer {
-    width: 100%;
-    background-color: var(--color-bg-2);
-    margin-top: 10%;
-    min-height: 300px;
-}
 
 .bg {
     background-color: #1D2125;
@@ -161,19 +155,20 @@ nav ul li a {
     color: var(--text-color) !important;
 }
 
-.hover{
+.hover {
     border: 1px solid transparent;
 }
+
 .hover:hover {
     border: 1px solid var(--text-color-3);
     border-radius: 4px;
     background-color: var(--text-color-3);
     cursor: pointer;
     color: var(--color-bg-2) !important;
-    transition:all 0.2s ease-out;
+    transition: all 0.2s ease-out;
 }
 
-.hover2:hover{
+.hover2:hover {
     opacity: 0.5;
     cursor: pointer;
 }
@@ -277,13 +272,13 @@ nav {
 
 .card-custom {
     min-height: 100%;
+    width: 400px;
     color: var(--text-color);
     background-image: linear-gradient(180deg, var(--color-bg)10%, var(--color-bg-2)100%);
     border-radius: 10px;
     padding-top: 0;
     padding-bottom: 5%;
     box-shadow: 0 0 1rcap var(--shadow-1);
-
 }
 
 
@@ -499,14 +494,13 @@ nav {
 .card-swipe {
     transform: translateY(400px);
     opacity: 0;
-    transition: all 1s ease-out;
+    transition: all 1s ease-in;
 }
 
 .card-swipe.swipe {
     transform: translateY(0px);
     opacity: 1;
 }
-
 
 
 
@@ -564,12 +558,12 @@ nav {
     border-radius: 50%;
     color: #ffffff;
     transition: all 0.5s ease;
-    
-    
+
+    text-decoration: none;
+
 }
 
 .footer-col .social-links a:hover {
     color: #24262b;
     background-color: #ffffff;
 }
-  
