@@ -31,6 +31,7 @@
 <script>
 
     let title =localStorage.getItem('data-theme')
+    let divFooter = document.getElementById('footerWave');
     
     setAttrribute()
 
@@ -49,12 +50,34 @@
             localStorage.setItem('data-theme','dark')
             title=localStorage.getItem('data-theme')
                 setAttrribute();
+                if(title=='dark'){
+                    document.getElementById('black').style.display='block';
+                    document.getElementById('white').style.display='none'
+                }else{
+                    document.getElementById('black').style.display='none';
+                    document.getElementById('white').style.display='block'
+                }
         }else if(title=='dark') {
             localStorage.setItem('data-theme','light')
             title=localStorage.getItem('data-theme')
                 setAttrribute ();
+                if(title=='dark'){
+                    divFooter.innerHTML= ` <svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="position: relative; display: block; width: calc(132% + 1.3px); height: 100px;">
+                        <path d="M0,0V46.29c47.31,21.91,98.33,31.13,148.17,34,75.93,4.72,147.62-16.84,223.12-29.52C453.11,33.9,532.63,47.9,607,53.64c68.17,5.29,136.23-9.3,200-24.3,87.22-20.72,172.28-46.21,261-51.8,50.24-3.23,99.71,1.27,148.17,12.58,48.88,11.41,95.9,29.35,142.14,42.27,30.43,8.38,62.77,16.2,94.68,20.22V0Z" opacity=".25" style="fill: #1D2125;"></path>
+                        <path d="M0,0V15.81C47.31,35,98.33,42.82,148.17,45.69c75.93,4.72,147.62-16.84,223.12-29.52,81.82-14.63,161.34-1.58,235.71,4.16,68.17,5.29,136.23-9.3,200-24.3,87.22-20.72,172.28-46.21,261-51.8,50.24-3.23,99.71,1.27,148.17,12.58,48.88,11.41,95.9,29.35,142.14,42.27,30.43,8.38,62.77,16.2,94.68,20.22V0Z" opacity=".5" style="fill: #1D2125;"></path>
+                        <path d="M0,0V5.63C47.31,24.91,98.33,31.13,148.17,34c75.93,4.72,147.62-16.84,223.12-29.52C453.11,21.9,532.63,35.9,607,41.64c68.17,5.29,136.23-9.3,200-24.3,87.22-20.72,172.28-46.21,261-51.8,50.24-3.23,99.71,1.27,148.17,12.58,48.88,11.41,95.9,29.35,142.14,42.27,30.43,8.38,62.77,16.2,94.68,20.22V0Z" style="fill: #1D2125;"></path>
+                    </svg>`
+                }else{
+                    divFooter.innetHTML= `<svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="position: relative; display: block; width: calc(132% + 1.3px); height: 100px;">
+                        <path d="M0,0V46.29c47.31,21.91,98.33,31.13,148.17,34,75.93,4.72,147.62-16.84,223.12-29.52C453.11,33.9,532.63,47.9,607,53.64c68.17,5.29,136.23-9.3,200-24.3,87.22-20.72,172.28-46.21,261-51.8,50.24-3.23,99.71,1.27,148.17,12.58,48.88,11.41,95.9,29.35,142.14,42.27,30.43,8.38,62.77,16.2,94.68,20.22V0Z" opacity=".25" style="fill: #ffffff;"></path>
+                        <path d="M0,0V15.81C47.31,35,98.33,42.82,148.17,45.69c75.93,4.72,147.62-16.84,223.12-29.52,81.82-14.63,161.34-1.58,235.71,4.16,68.17,5.29,136.23-9.3,200-24.3,87.22-20.72,172.28-46.21,261-51.8,50.24-3.23,99.71,1.27,148.17,12.58,48.88,11.41,95.9,29.35,142.14,42.27,30.43,8.38,62.77,16.2,94.68,20.22V0Z" opacity=".5" style="fill: #ffffff;"></path>
+                        <path d="M0,0V5.63C47.31,24.91,98.33,31.13,148.17,34c75.93,4.72,147.62-16.84,223.12-29.52C453.11,21.9,532.63,35.9,607,41.64c68.17,5.29,136.23-9.3,200-24.3,87.22-20.72,172.28-46.21,261-51.8,50.24-3.23,99.71,1.27,148.17,12.58,48.88,11.41,95.9,29.35,142.14,42.27,30.43,8.38,62.77,16.2,94.68,20.22V0Z" style="fill: #ffffff;"></path>
+                    </svg>`
+                }
         }
     }
+
+    
 
     let windows = window.location.href
     const modal = document.getElementById('modal')
@@ -72,6 +95,9 @@
         modal.style.display='none';
     }
 
+    
+
+ 
 
     
 </script>
