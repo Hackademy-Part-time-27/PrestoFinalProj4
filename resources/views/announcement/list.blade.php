@@ -3,6 +3,9 @@
         <div class="col-md-8 mx-auto py-4 " >  
                 <h1 class="text-3">{{__('ui.welcome') }} </h1>
                 <h2>{{__('ui.ads_page_text') }} </h2>
+                @if(isset($searched))
+                    <h3>Hai cercato : <strong class="text-3">{{ $searched }}</strong></h3>
+                @endif
         </div>
         <div class="col-12 col-sm-5 col-md-3 py-4">
         <div>
