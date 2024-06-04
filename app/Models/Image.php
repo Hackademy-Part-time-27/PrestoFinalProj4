@@ -12,6 +12,10 @@ class Image extends Model
 
     protected $fillable = ['path', 'announcements_id','labels', 'adult','spoof','medical', 'violence', 'racy'];
 
+    protected $casts = [
+        'labels'=> 'array'
+    ];
+
     public function announcement()
     {
         return $this->belongsTo(Announcement::class);

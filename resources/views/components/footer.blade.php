@@ -81,8 +81,9 @@
         <!-- Newsletter Subscription -->
         <div style="margin-bottom: 50px;">
             <h3 style="font-size: 22px; color: #f8f9fa; margin-bottom: 15px;">Iscriviti alla nostra Newsletter</h3>
-            <form action="/newsletter" method="post" style="display: flex; justify-content: center; align-items: center;">
-                <input type="email" name="email" placeholder="Inserisci il tuo indirizzo email" required style="padding: 10px 20px; font-size: 16px; border: 1px solid #ced4da; border-radius: 4px; width: 300px; max-width: 100%; margin-right: 10px;">
+            <form action="{{ route('form.newsletter') }}" method="post" style="display: flex; justify-content: center; align-items: center;">
+                @csrf
+                <input type="email" name="email" placeholder="Inserisci il tuo indirizzo email" required style="padding: 10px 20px; font-size: 16px; border: 1px solid #ced4da; border-radius: 4px; width: 300px; max-width: 100%; margin-right: 10px;" value="{{ auth()->user()->email ?? '' }}">
                 <button type="submit" style="padding: 10px 20px; font-size: 16px; color: #fff; background-color: #007bff; border: none; border-radius: 4px; cursor: pointer;">Iscriviti</button>
             </form>
         </div>

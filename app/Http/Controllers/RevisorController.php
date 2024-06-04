@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Announcement;
-use App\Mail\ViewForm;
 use \Illuminate\Support\Facades\Mail;
+use App\Mail\NewsLetterMail;
+use App\Mail\ViewForm;
+use App\Models\Announcement;
+use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 
 class RevisorController extends Controller
@@ -18,7 +20,13 @@ class RevisorController extends Controller
 
     public function acceptAnnouncement(Announcement $announcement)
     {
+        $counter= 0;
         $announcement->setAccepted(true);
+        $counter += 1;
+        $users = User::where('news_letter', true)->get();
+            foreach($users as $user){
+                Mail::to($user->email)->send(new NewsLetterMail($announcement->title));
+            }
         return redirect()->back()->with(['message'=>'Complimenti hai accettato l\'annuncio!']);
     }
 
@@ -32,8 +40,9 @@ class RevisorController extends Controller
     {
 
         
-        if(Announcement::where('is_accepted', [true,false])->count() !== 0){
-            $announcement= Announcement::where('is_accepted', [true, false])->orderByDesc('updated_at')->first();
+        if(Announcement::where('is_accepted',true)->
+        orWhere('is_Accepted', false)->count() !== 0){
+            $announcement= Announcement::where('is_accepted',true)->orWhere('is_accepted',false)->orderByDesc('updated_at')->first();
             $announcement->is_accepted = null;
             $announcement->save();
             return redirect()->back()->with(['message'=>'Ora puoi revisionare nuovamente l\'annuncio!']);
