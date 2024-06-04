@@ -31,6 +31,7 @@
 <script>
 
     let title =localStorage.getItem('data-theme')
+    let divFooter = document.getElementById('footerWave');
     
     setAttrribute()
 
@@ -49,12 +50,28 @@
             localStorage.setItem('data-theme','dark')
             title=localStorage.getItem('data-theme')
                 setAttrribute();
+                if(title=='dark'){
+                    document.getElementById('black').style.display='block';
+                    document.getElementById('white').style.display='none'
+                }else{
+                    document.getElementById('black').style.display='none';
+                    document.getElementById('white').style.display='block'
+                }
         }else if(title=='dark') {
             localStorage.setItem('data-theme','light')
             title=localStorage.getItem('data-theme')
                 setAttrribute ();
+                if(title=='dark'){
+                    document.getElementById('black').style.display='block';
+                    document.getElementById('white').style.display='none'
+                }else{
+                    document.getElementById('black').style.display='none';
+                    document.getElementById('white').style.display='block'
+                }
         }
     }
+
+    
 
     let windows = window.location.href
     const modal = document.getElementById('modal')
@@ -72,6 +89,9 @@
         modal.style.display='none';
     }
 
+    
+
+ 
 
     
 </script>

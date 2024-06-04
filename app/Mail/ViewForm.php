@@ -31,7 +31,7 @@ public $email;
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'View Form',
+            subject: 'L\'utente '. $this->email . ' desidera diventare revisore',
         );
     }
 

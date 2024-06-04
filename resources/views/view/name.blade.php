@@ -1,18 +1,42 @@
-<x-layout>
-    <div class="row bg-2 m-0 py-4 w-100">
-        <div class="col-md-8 mx-auto py-4 " >  
-                <h1>Benvenuto su <span class="text-3 ">{{ config('app.name') }}</span></h1>
-                <h2>Ecco gli ultimi annunci</h2>
-        </div>
-    </div>
-    <div class="container-fluid px-5">
-        <div class="row justify-content-start">
-            <div class="col-md-12">
-              <h1>L'utente con mail:{{$email}} vuole diventare un revisore,clicca sul bottone per accettare la richiesta, altrimenti ignora.</h1>
-              <div class="mt-3">
-                <a class="text-decoration-none btn-custom" href="{{ route('revisor.make', $email) }}">Rendi Ufficialmente Revisore</a>
-              </div>
-            </div>
-        </div>
-    </div>
-</x-layout>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+.contenitore{
+  padding-left: 5%;
+  padding-top: 5%;
+  display:flex;
+  flex-flow: column nowrap;
+  justify-content:start;
+}
+
+.btn-custom{
+  text-decoration: none;
+  color: #fff;
+  padding-left: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  padding-left: 2%;
+  background-color: #579dff ;
+  border-radius: 10px;
+  width: 25%;
+}
+
+.btn-custom:hover{
+  opacity: 0.5;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="contenitore">
+        <h4 style="text-transform:none;">L'utente con mail: {{$email}} vuole diventare un revisore, clicca sul bottone per accettare la richiesta, altrimenti ignora.</h4>
+        <a class="btn-custom" href="{{ route('revisor.make', $email) }}">Rendi Ufficialmente Revisore</a>
+  </div>   
+</body>
+</html>

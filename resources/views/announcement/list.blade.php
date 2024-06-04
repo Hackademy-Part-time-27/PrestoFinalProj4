@@ -3,8 +3,11 @@
         <div class="col-md-8 mx-auto py-4 " >  
                 <h1 class="text-3">{{__('ui.welcome') }} </h1>
                 <h2>{{__('ui.ads_page_text') }} </h2>
+                @if(isset($searched))
+                    <h3>Hai cercato : <strong class="text-3">{{ $searched }}</strong></h3>
+                @endif
         </div>
-        <div class="col-md-2 py-4">
+        <div class="col-12 col-sm-5 col-md-3 py-4">
         <div>
             <a class="btn-custom text-decoration-none fs-4" href="{{ route('announcement.create') }}">{{__('ui.create_ads') }}</a>
         </div>
@@ -16,15 +19,15 @@
                 <div class="container-sm">
                     <div class="row justify-content-start">
                         @forelse($announcements as $announcement)
-                            <div class="col-4 mb-4 ">
+                            <div class="col-12 col-sm-8 col-md-6 col-lg-4 col-xxl-3 mb-4">
                                 <div class="card-custom mx-4 my-3 card-swipe" id="card">
                                         <div class="div-img">
                                             <img class="img-fluid rounded-1 w-100 ps-0" src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(300,300) : 'https://picsum.photos/200' }}" class="card-img-top p-3 rounded" alt="...">
                                         </div>
                                         <div class="text-start pt-2 div-text-card " >
-                                            <h2 class="card-title text-3 border-bttm">{{$announcement->title}}</h2>
+                                            <h2 class="card-title text-3 border-bttm">{{Str::limit($announcement->title, 20)}}</h2>
                                             <p class="card-text fs-4 text-danger ">{{ $announcement->category->name}} </p>
-                                            <p class="card-text fs-5 border-bttm">{{$announcement->body}}</p>
+                                            <p class="card-text fs-5 border-bttm text-truncate">{{$announcement->body}}</p>
                                             <span class="text-end"><p class="card-text fs-2 text-danger pe-2">{{Number::currency($announcement->price, in: 'EUR', locale: 'de')}}</p></span>
                                             
                                             <div class="my-4">
