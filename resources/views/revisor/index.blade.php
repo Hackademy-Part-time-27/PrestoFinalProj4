@@ -91,4 +91,17 @@
             </div>
         </div>
 @endif
+
+
+              <div class="col-md-3">
+                        <div class="card-body"></div>
+                        <h5 class="tc-accent">Revisioni Immagini</h5>
+                        <p>Adulti: <span class="{{$image->adult}}"></span></p>
+                        <p>Satira: <span class="{{$image->spoof}}"></span></p>
+                        <p>Medicina: <span class="{{$image->medical}}"></span></p>
+                        <p>Violenza: <span class="{{$image->violence}}"></span></p>
+                        <p>Contenuto Ammicante: <span class="{{$image->racy}}"></span></p>
+                        </div>
+
+              </div>
 </x-layout>
