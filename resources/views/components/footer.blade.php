@@ -14,7 +14,7 @@
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin-bottom: 50px; text-align: left;">
             <!-- About and Logo -->
             <div style="flex: 1; min-width: 300px; margin-bottom: 30px; ">
-                <img src="{{ asset('img/logo.png') }}" alt="Presto.it Logo" style="max-width: 250px; margin-bottom: 20px;">
+                <img src="{{ asset('./img/Senza titolo-1.png') }}" alt="Presto.it Logo" style="max-width: 250px; margin-bottom: 20px;">
                 <p style="font-size: 16px; line-height: 1.6; color: #ced4da;">
                     Presto.it velocità e efficienza. Scopri i nostri servizi e unisciti alla nostra comunità di utenti soddisfatti.
                 </p>
