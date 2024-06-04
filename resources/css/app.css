@@ -45,7 +45,7 @@ style="fill:#FFFFFF;">
 
 [data-theme='light'] {
     --color: transparent;
-    --color-bg: #ffffff !important;
+    --color-bg: #F6F5F2 !important;
     --color-bg-2: #EEEEEE !important;
     --text-color: #38414A !important;
     --text-color-2: #758195 !important;
@@ -86,12 +86,6 @@ body {
     color: var(--text-color) !important;
 }
 
-.footer {
-    width: 100%;
-    background-color: var(--color-bg-2);
-    margin-top: 10%;
-    min-height: 300px;
-}
 
 .bg {
     background-color: #1D2125;
@@ -138,7 +132,7 @@ body {
 }
 
 nav {
-    background-color: var(--color);
+
     color: var(--text-color) !important;
     background-color: var(--color-bg);
     position: sticky !important;
@@ -278,13 +272,13 @@ nav {
 
 .card-custom {
     min-height: 100%;
+    width: 300px;
     color: var(--text-color);
     background-image: linear-gradient(180deg, var(--color-bg)10%, var(--color-bg-2)100%);
     border-radius: 10px;
     padding-top: 0;
     padding-bottom: 5%;
     box-shadow: 0 0 1rcap var(--shadow-1);
-
 }
 
 
@@ -507,7 +501,6 @@ nav {
     transform: translateY(0px);
     opacity: 1;
 }
-
 
 
 

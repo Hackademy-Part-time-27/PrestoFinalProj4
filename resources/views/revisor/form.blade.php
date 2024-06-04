@@ -24,7 +24,7 @@
                     <div class="row g-3">
                         <div class="col-12">
                             <label class="form-label fs-5" for="email">Email</label>
-                            <input type="email" name="email" id="email" class="form-control  mb-2 @error('email') is-invalid @enderror" value="{{ old('email') }}">
+                            <input type="email" name="email" id="email" class="form-control  mb-2 @error('email') is-invalid @enderror" value="{{ old('email', auth()->user()->email ) }}">
                             @error('email') <span class="small text-danger fs-6">{{ $message }}</span> @enderror
                         </div>
                        

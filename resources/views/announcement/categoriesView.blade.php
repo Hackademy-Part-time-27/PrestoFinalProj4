@@ -10,7 +10,7 @@
                 <div class="container-sm">
                     <div class="row justify-content-start">
                         @forelse($announcements as $announcement)
-                            <div class="col-4 mb-4">
+                            <div class="col-12 col-sm-8 col-md-6 col-lg-4 col-xxl-3 mb-4">
                                 <div class="card-custom mx-4 my-3">
                                         <div class="div-img">
                                             <img class="img-fluid rounded-1 w-100" src="{{ !$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()->path) : 'https://picsum.photos/200' }}" class="card-img-top p-3 rounded" alt="...">
