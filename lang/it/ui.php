@@ -55,8 +55,12 @@ return [
     'search_ads' => 'Non ci sono annunci per questi campi. Prova a cambiare!',
     'mail_revisor_text' => 'LAVORA CON NOI',
     'mail_revisor_button' => 'Diventa Revisore',
-    'works_as_an_auditor' => 'lavora come revisore!'
+    'works_as_an_auditor' => 'lavora come revisore!',
     
+
+    'footer_description' => 'lavora come revisore!'
+
+
     
     
     
