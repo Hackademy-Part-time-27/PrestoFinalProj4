@@ -55,7 +55,24 @@ return [
     'search_ads' => 'Для этих полей нет объявлений. Попробуйте изменить!',
     'mail_revisor_text' => 'РАБОТАЙТЕ С НАМИ',
     'mail_revisor_button' => 'Стать Ревизором',
-    'works_as_an_auditor' => 'работайте как ревизор!'
+    'works_as_an_auditor' => 'работайте как ревизор!',
+    'footer_description' => 'PRESTO.IT СКОРОСТЬ И ЭФФЕКТИВНОСТЬ. ОТКРОЙТЕ ДЛЯ СЕБЯ НАШИ УСЛУГИ И ПРИСОЕДИНЯЙТЕСЬ К НАШЕМУ СООБЩЕСТВУ ДОВОЛЬНЫХ ПОЛЬЗОВАТЕЛЕЙ.',
+'footer_description_team' => 'Наша Команда',
+'footer_description_social' => 'Следите за нами в социальных сетях',
+'footer_description_navigation' => 'Навигация',
+'footer_description_menu' => 'О Нас',
+'footer_description_menu_2' => 'Услуги',
+'footer_description_menu_3' => 'Контакты',
+'footer_description_menu_4' => 'Блог',
+'footer_description_legal_information' => 'Юридическая Информация',
+'footer_description_legal_information_menu' => 'Политика Конфиденциальности',
+'footer_description_legal_information_menu_2' => 'Условия и Положения',
+'footer_description_legal_information_menu_3' => 'Политика в Отношении Файлов Cookie',
+'footer_newsletter_text' => 'ПОДПИШИТЕСЬ НА НАШУ РАССЫЛКУ',
+'footer_reserved' => ' 2024 PRESTO.IT. ВСЕ ПРАВА ЗАЩИЩЕНЫ.',
+'footer_button' => ' ПОДПИШИТЕСЬ',
+'category_search_text' => ' Вы искали:',
+
     
     
 

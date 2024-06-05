@@ -57,7 +57,24 @@ return [
     'mail_revisor_button' => 'Become an Auditor',
     'works_as_an_auditor' => 'works as an auditor!',
     
-    
+    'footer_description' => 'PRESTO.IT SPEED AND EFFICIENCY. DISCOVER OUR SERVICES AND JOIN OUR COMMUNITY OF SATISFIED USERS.',
+'footer_description_team' => 'Our Team',
+'footer_description_social' => 'Follow Us on Social Media',
+'footer_description_navigation' => 'Navigation',
+'footer_description_menu' => 'About Us',
+'footer_description_menu_2' => 'Services',
+'footer_description_menu_3' => 'Contacts',
+'footer_description_menu_4' => 'Blog',
+'footer_description_legal_information' => 'Legal Information',
+'footer_description_legal_information_menu' => 'Privacy Policy',
+'footer_description_legal_information_menu_2' => 'Terms and Conditions',
+'footer_description_legal_information_menu_3' => 'Cookie Policy',
+'footer_newsletter_text' => 'SUBSCRIBE TO OUR NEWSLETTER',
+'footer_reserved' => ' 2024 PRESTO.IT. ALL RIGHTS RESERVED.',
+'footer_button' => 'SUBSCRIBE',
+'category_search_text' => 'You searched for:',
+
+
 
     
 ];
