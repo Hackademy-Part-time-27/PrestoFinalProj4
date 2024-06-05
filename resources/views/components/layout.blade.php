@@ -30,7 +30,7 @@
     <x-footer/>
 <script>
 
-    let title =localStorage.getItem('data-theme')
+    let title =localStorage.getItem('data-theme') ?? 'light'
     let divFooter = document.getElementById('footerWave');
     
     setAttrribute()
