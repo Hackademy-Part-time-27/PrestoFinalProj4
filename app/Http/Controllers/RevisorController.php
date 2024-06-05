@@ -20,12 +20,10 @@ class RevisorController extends Controller
 
     public function acceptAnnouncement(Announcement $announcement)
     {
-        $counter= 0;
         $announcement->setAccepted(true);
-        $counter += 1;
         $users = User::where('news_letter', true)->get();
             foreach($users as $user){
-                Mail::to($user->email)->send(new NewsLetterMail($announcement->title));
+                Mail::to('admin@example.com')->send(new NewsLetterMail($announcement->title));
             }
         return redirect()->back()->with(['message'=>'Complimenti hai accettato l\'annuncio!']);
     }

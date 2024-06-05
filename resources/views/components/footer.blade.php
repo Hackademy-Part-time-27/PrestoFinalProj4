@@ -27,7 +27,7 @@
             </div>
             <!-- Team Members -->
             <div style="flex: 1; min-width: 300px; margin-bottom: 30px;"  class="footer-col ms-3">
-                <h4 style="font-size: 22px; color: #f8f9fa; margin-bottom: 15px;">Il nostro team</h4>
+                <h4 style="font-size: 22px; color: #f8f9fa; margin-bottom: 15px;">      {{__('ui.footer_description_team') }}</h4>
                 <ul style="list-style: none; padding: 0; font-size: 16px; line-height: 1.6; color: #ced4da;">
                     <li>Agostino Di Bartolomeo</li>
                     <li>Riccardo Cardia</li>
@@ -37,7 +37,7 @@
             </div>
             <!-- Social Media Links -->
             <div style="flex: 1; min-width: 300px; margin-bottom: 30px;" class="footer-col">
-                <h4 style="font-size: 22px; color: #f8f9fa; margin-bottom: 15px;">Seguici sui social</h4>
+                <h4 style="font-size: 22px; color: #f8f9fa; margin-bottom: 15px;">      {{__('ui.footer_description_social') }}</h4>
                 <div class="social-links">
                     <a href="#" target="_blank" style="margin-right: 10px;" class="fab fa-facebook-f">
                       
@@ -59,32 +59,32 @@
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin-bottom: 50px; text-align: left;" class="footer-col">
             <!-- Navigation Links -->
             <div style="flex: 1; min-width: 300px; margin-bottom: 30px;">
-                <h4 style="font-size: 22px; color: #f8f9fa; margin-bottom: 15px;">Navigazione</h4>
+                <h4 style="font-size: 22px; color: #f8f9fa; margin-bottom: 15px;">{{__('ui.footer_description_navigation') }}</h4>
                 <ul style="list-style: none; padding: 0; font-size: 16px; line-height: 1.6; color: #ced4da;">
-                    <li><a href="/chi-siamo" style=" text-decoration: none;">Chi siamo</a></li>
-                    <li><a href="/servizi" style=" text-decoration: none;">Servizi</a></li>
-                    <li><a href="/contatti" style=" text-decoration: none;">Contatti</a></li>
-                    <li><a href="/blog" style=" text-decoration: none;">Blog</a></li>
+                    <li><a href="/chi-siamo" style=" text-decoration: none;">{{__('ui.footer_description_menu') }}</a></li>
+                    <li><a href="/servizi" style=" text-decoration: none;">{{__('ui.footer_description_menu_2') }}</a></li>
+                    <li><a href="/contatti" style=" text-decoration: none;">{{__('ui.footer_description_menu_3') }}</a></li>
+                    <li><a href="/blog" style=" text-decoration: none;">{{__('ui.footer_description_menu_4') }}</a></li>
                 </ul>
             </div>
             <!-- Legal Links -->
             <div style="flex: 1; min-width: 300px; margin-bottom: 30px;">
-                <h4 style="font-size: 22px; color: #f8f9fa; margin-bottom: 15px;">Informazioni Legali</h4>
+                <h4 style="font-size: 22px; color: #f8f9fa; margin-bottom: 15px;">{{__('ui.footer_description_legal_information') }}</h4>
                 <ul style="list-style: none; padding: 0; font-size: 16px; line-height: 1.6; color: #ced4da;">
-                    <li><a href="/privacy-policy" style="text-decoration: none;">Privacy Policy</a></li>
-                    <li><a href="/termini-e-condizioni" style=" text-decoration: none;">Termini e Condizioni</a></li>
-                    <li><a href="/cookie-policy" style=" text-decoration: none;">Cookie Policy</a></li>
+                    <li><a href="/privacy-policy" style="text-decoration: none;">{{__('ui.footer_description_legal_information_menu') }}</a></li>
+                    <li><a href="/termini-e-condizioni" style=" text-decoration: none;">{{__('ui.footer_description_legal_information_menu_2') }}</a></li>
+                    <li><a href="/cookie-policy" style=" text-decoration: none;">{{__('ui.footer_description_legal_information_menu_3') }}</a></li>
                 </ul>
             </div>
         </div>
 
         <!-- Newsletter Subscription -->
         <div style="margin-bottom: 50px;">
-            <h3 style="font-size: 22px; color: #f8f9fa; margin-bottom: 15px;">Iscriviti alla nostra Newsletter</h3>
+            <h3 style="font-size: 22px; color: #f8f9fa; margin-bottom: 15px;">{{__('ui.footer_newsletter_text') }}</h3>
             <form action="{{ route('form.newsletter') }}" method="post" style="display: flex; justify-content: center; align-items: center;">
                 @csrf
                 <input type="email" name="email" placeholder="Inserisci il tuo indirizzo email" required style="padding: 10px 20px; font-size: 16px; border: 1px solid #ced4da; border-radius: 4px; width: 300px; max-width: 100%; margin-right: 10px;" value="{{ auth()->user()->email ?? '' }}">
-                <button type="submit" style="padding: 10px 20px; font-size: 16px; color: #fff; background-color: #007bff; border: none; border-radius: 4px; cursor: pointer;">Iscriviti</button>
+                <button type="submit" style="padding: 10px 20px; font-size: 16px; color: #fff; background-color: #007bff; border: none; border-radius: 4px; cursor: pointer;">{{__('ui.footer_button') }}</button>
             </form>
         </div>
 
@@ -97,7 +97,7 @@
 
         <!-- Footer Bottom -->
         <div style="border-top: 1px solid #e9ecef; padding-top: 20px; font-size: 14px; color: #ced4da;">
-            &copy; 2024 Presto.it. Tutti i diritti riservati.
+            &copy; {{__('ui.footer_reserved') }}
         </div>
     </div>
 </footer>

@@ -56,6 +56,24 @@ return [
     'mail_revisor_text' => 'TRABAJA CON NOSOTROS',
     'mail_revisor_button' => '  Conviértete en auditor',
     'works_as_an_auditor' => '¡Trabaja como revisor!',
+    'footer_description' => 'PRESTO.IT VELOCIDAD Y EFICIENCIA. DESCUBRE NUESTROS SERVICIOS Y ÚNETE A NUESTRA COMUNIDAD DE USUARIOS SATISFECHOS.',
+'footer_description_team' => 'Nuestro Equipo',
+'footer_description_social' => 'Síguenos en las Redes Sociales',
+'footer_description_navigation' => 'Navegación',
+'footer_description_menu' => 'Sobre Nosotros',
+'footer_description_menu_2' => 'Servicios',
+'footer_description_menu_3' => 'Contactos',
+'footer_description_menu_4' => 'Blog',
+'footer_description_legal_information' => 'Información Legal',
+'footer_description_legal_information_menu' => 'Política de Privacidad',
+'footer_description_legal_information_menu_2' => 'Términos y Condiciones',
+'footer_description_legal_information_menu_3' => 'Política de Cookies',
+'footer_newsletter_text' => 'SUSCRÍBETE A NUESTRO BOLETÍN',
+'footer_reserved' => ' 2024 PRESTO.IT. TODOS LOS DERECHOS RESERVADOS.',
+'footer_button' => 'SUSCRIBIRSE',
+'category_search_text' => 'Has buscado:',
+
+
 
 
   

@@ -25,7 +25,7 @@ class RemoveFace implements ShouldQueue
      */
     public function __construct($announcement_image_id)
     {
-        $this->$announcement_image_id= $announcement_image_id;
+        $this->announcement_image_id = $announcement_image_id;
     }
 
     /**
@@ -62,26 +62,16 @@ class RemoveFace implements ShouldQueue
 
             $image = SpatieImage::load($srcPath);
 
-            $image->watermark(base_path('resources/img/smile.png'))
-            ->watermarkPosition('top-left')
-            ->watermarkPadding($bounds[0][0], $bounds[0][1])
-            ->watermarkWidth($w, Manipulations::UNIT_PIXELS)
-            ->watermarkHeight($h, Manipulations::UNIT_PIXELS)
-            ->watermarkFit(Manipulations::FIT_STRETCH);
             
-            /*
             $image->watermark(base_path('resources/img/smile.png'),
-            AlignPosition::Top,
-            width: $w,
-            widthUnit: Unit::Percent,
-            height: $h,
-            heightUnit: Unit::Percent,
+            AlignPosition::TopLeft,
+            width: $w+50,
+            height: $h+50,
             paddingX: $bounds[0][0], 
             paddingY: $bounds[0][1],
-            paddingUnit: Unit::Percent,
             fit: Fit::Stretch);
 
-            */
+            
 
             $image->save($srcPath);
         }
