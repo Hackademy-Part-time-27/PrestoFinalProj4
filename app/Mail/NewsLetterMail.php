@@ -9,29 +9,25 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class ViewForm extends Mailable
+class NewsLetterMail extends Mailable
 {
     use Queueable, SerializesModels;
-public $email;
+
     /**
      * Create a new message instance.
      */
-    public function __construct( $email)
+    public function __construct(public $title)
     {
-        $this->email = $email;
+        //
     }
 
-    public function build()
-    {
-        return $this->from('presto.it@noreply.com')->view('mail.revisor');
-    }
     /**
      * Get the message envelope.
      */
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'L\'utente '. $this->email . ' desidera diventare revisore',
+            subject: 'Sono stati caricati 3 nuovi annunci su '. config('app.name') . '!',
         );
     }
 
@@ -41,7 +37,7 @@ public $email;
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'view.newsletter',
         );
     }
 

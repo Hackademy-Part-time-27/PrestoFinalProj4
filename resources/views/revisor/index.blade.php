@@ -26,8 +26,8 @@
         </div>
  @else       
     <div class="container">
-        <div class="row mx-auto">
-            <div class="col-lg-12">
+        <div class="row mx-auto justify-content-center">
+            <div class="col-12 col-lg-6">
                 <div id="carouselExample" class="carousel slide">
                     <div class="carousel-inner">
                         @if($announcement_to_check->images)
@@ -64,10 +64,31 @@
                     <p>{{__('ui.ads_published') }} {{ $announcement_to_check->created_at->format('D/m/Y') }} </p>
                 </div>
             </div>
+            <div class="col-12 col-lg-3 mt-2">
+                <p>Tags</p>
+                <div class="mt-2">
+                    @if($image->labels)
+                        @foreach($image->labels as $label)
+                            <p class="d-inline">{{ $label }}</p>
+                        @endforeach
+                    @endif        
+                </div>
+                
+            </div>
+            <div class="col-12 col-lg-3 mt-2">
+                        <div class="card-body"></div>
+                        <h5 class="tc-accent">Revisioni Immagini</h5>
+                        <p>Adulti: <span class="{{$image->adult}}"></span></p>
+                        <p>Satira: <span class="{{$image->spoof}}"></span></p>
+                        <p>Medicina: <span class="{{$image->medical}}"></span></p>
+                        <p>Violenza: <span class="{{$image->violence}}"></span></p>
+                        <p>Contenuto Ammicante: <span class="{{$image->racy}}"></span></p>
+                        </div>
+              </div>
         </div>
-        <div class="row justify-content-start">
-            <div class="col-lg-12">
-                <div class="row justify-content-start w-75 ">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="row justify-content-start w-100 ">
                     <div class="col">
                         <form action="{{ route('revisor.accept_announcement',['announcement' => $announcement_to_check]) }}" method="POST">
                             @csrf
@@ -91,4 +112,6 @@
             </div>
         </div>
 @endif
+
+
 </x-layout>

@@ -35,8 +35,7 @@
 </head>
 <body>
   <div class="contenitore">
-        <h4 style="text-transform:none;">L'utente con mail: {{$email}} vuole diventare un revisore, clicca sul bottone per accettare la richiesta, altrimenti ignora.</h4>
-        <a class="btn-custom" href="{{ route('revisor.make', $email) }}">Rendi Ufficialmente Revisore</a>
+        <h4 style="text-transform:none;">E' stato pubblicato un nuovo annuncio su {{ config('app.name') }}</h4>
   </div>   
 </body>
 </html>

@@ -37,7 +37,7 @@
                     </div>
                     <div class="mb-3">
                         <div class="mt-2">
-                            <div wire:loading> 
+                            <div wire:loading wire:target="temporary_images" > 
                                 <div class="spinner-border text-secondary" role="status">
                                     <span class="visually-hidden">Loading...</span>
                                 </div>
@@ -56,7 +56,7 @@
                                         </div>
                             </div>
                         @endif   
-                        <button class="btn-custom" type="submit">{{__('ui.ads_create_button') }}</button>
+                        <button class="btn-custom" type="submit" >{{__('ui.ads_create_button') }}</button>
                     </div>
             </form> 
     </div>

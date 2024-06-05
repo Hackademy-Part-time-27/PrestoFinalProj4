@@ -1,12 +1,14 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\UserController;
 use App\Http\Controllers\AnnouncementController;
-use App\Http\Controllers\FrontController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\FrontController;
+use App\Http\Controllers\NewsLetterController;
 use App\Http\Controllers\RevisorController;
+use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Route;
+
 
 
 Route::get('/',[FrontController::class,'welcome'])->name('welcome');
@@ -40,3 +42,6 @@ Route::get('/Accepting/Revisor/{email}', [RevisorController::class, 'MakeRevisor
 Route::get('/getBack', [RevisorController::class, 'getBack'])->name('revisor.getBack');
 //Route for setting language
 Route::post('/lingua/{lang}', [FrontController::class, 'setLanguage'])->name('setLocale');
+
+//newsletter 
+Route::post('/register/newsLetter', [NewsLetterController::class, 'registerNewsLetter'])->name('form.newsletter')->middleware('auth');

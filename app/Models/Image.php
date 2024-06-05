@@ -10,7 +10,11 @@ class Image extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['path', 'announcements_id'];
+    protected $fillable = ['path', 'announcements_id','labels', 'adult','spoof','medical', 'violence', 'racy'];
+
+    protected $casts = [
+        'labels'=> 'array'
+    ];
 
     public function announcement()
     {
