@@ -55,7 +55,28 @@ return [
     'search_ads' => 'Für diese Felder sind keine Anzeigen vorhanden. Versuchen Sie, die Suche zu ändern!',
     'mail_revisor_text' => 'ARBEITEN SIE MIT UNS',
     'mail_revisor_button' => 'Werden Sie Prüfer',
-    'works_as_an_auditor' => 'arbeiten Sie als Prüfer!'
+    'works_as_an_auditor' => 'arbeiten Sie als Prüfer!',
+    'footer_description' => 'PRESTO.IT GESCHWINDIGKEIT UND EFFIZIENZ. ENTDECKEN SIE UNSERE DIENSTLEISTUNGEN UND SCHLIESSEN SIE SICH UNSERER GEMEINSCHAFT ZUFRIEDENER NUTZER AN.',
+'footer_description_team' => 'Unser Team',
+'footer_description_social' => 'Folgen Sie uns in den sozialen Medien',
+'footer_description_navigation' => 'Navigation',
+'footer_description_menu' => 'Über Uns',
+'footer_description_menu_2' => 'Dienstleistungen',
+'footer_description_menu_3' => 'Kontakt',
+'footer_description_menu_4' => 'Blog',
+'footer_description_legal_information' => 'Rechtliche Informationen',
+'footer_description_legal_information_menu' => 'Datenschutzrichtlinie',
+'footer_description_legal_information_menu_2' => 'Allgemeine Geschäftsbedingungen',
+'footer_description_legal_information_menu_3' => 'Cookie-Richtlinie',
+'footer_newsletter_text' => 'ABONNIEREN SIE UNSEREN NEWSLETTER',
+'footer_reserved' => ' 2024 PRESTO.IT. ALLE RECHTE VORBEHALTEN.',
+'footer_button' => ' ANMELDEN',
+'category_search_text' => ' Sie haben gesucht:',
+
+
+
+
+
     
     
     

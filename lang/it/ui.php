@@ -58,7 +58,28 @@ return [
     'works_as_an_auditor' => 'lavora come revisore!',
     
 
-    'footer_description' => 'lavora come revisore!'
+    'footer_description' => 'PRESTO.IT VELOCITÀ ED EFFICIENZA. SCOPRI I NOSTRI SERVIZI E UNISCITI ALLA NOSTRA COMUNITÀ DI UTENTI SODDISFATTI.',
+    'footer_description_team' => 'Il nostro team',
+    'footer_description_social' => 'Seguici sui social',
+    'footer_description_navigation' => 'Navigation',
+    'footer_description_menu' => 'Chi Siamo',
+    'footer_description_menu_2' => 'Servizi',
+    'footer_description_menu_3' => 'Contatti',
+    'footer_description_menu_4' => 'Blog', 
+    'footer_description_legal_information' => 'Informazioni Legali', 
+    'footer_description_legal_information_menu' => 'Privacy Policy', 
+    'footer_description_legal_information_menu_2' => 'Termini e Condizioni', 
+    'footer_description_legal_information_menu_3' => 'Cookie Policy', 
+    'footer_newsletter_text' => 'ISCRIVITI ALLA NOSTRA NEWSLETTER', 
+    'footer_reserved' => ' 2024 PRESTO.IT. TUTTI I DIRITTI RISERVATI.', 
+    'footer_button' => ' ISCRIVITI', 
+    'category_search_text' => ' Hai cercato:', 
+
+
+
+
+
+    
 
 
     
