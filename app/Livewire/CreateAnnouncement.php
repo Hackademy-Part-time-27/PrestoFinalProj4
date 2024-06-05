@@ -44,8 +44,8 @@ class CreateAnnouncement extends Component
             'body'=>'required|min:8',
             'price'=>'required',
             'category_id'=>'required',
-            'temporary_images.*'=>'required|max:1024',
-            'images.*' => 'required|max:1024'
+            'temporary_images.*'=>'required|max:1024|mimes:jpg,jpeg',
+            'images.*' => 'required|max:1024|mimes:jpg,jpeg'
         ];
     }
 
@@ -58,15 +58,17 @@ class CreateAnnouncement extends Component
             'body.required'=>'Il campo Descrizione è obbligatorio!',
             'price.required'=>'Il campo Prezzo è obbligatorio!',
             'temporary_images.*.image' => 'Il File dev\'essere un\'immagine',
-            'temporary_images.*.max' => 'Il File dev\'essere un\'immagine',
+            'temporary_images.*.max' => 'Il File non deve superare i :max Kbs',
+            'temporary_images.*.mimes'=>'Il file dev\'essere di tipo jpg o jpeg',
             'images.*.image' => 'Il File dev\'essere un\'immagine',
             'images.*.max' => 'Il File non deve superare i :max kBs',
+            'images.*.mimes'=>'Il file dev\'essere di tipo jpg o jpeg',
            
         ];
     }
 
     public function updatedTemporaryImages(){
-        if($this->validate(['temporary_images'=>'required|max:1024'])){
+        if($this->validate(['temporary_images.*'=>'required|max:1024|mimes:jpg,jpeg'])){
             foreach ($this->temporary_images as $photo) {
                 $this->images[]=$photo; 
             }
@@ -85,24 +87,26 @@ class CreateAnnouncement extends Component
         $announcement->user_id = $this->user_id;
        
         $announcement->save();
-      
+        
+        
+        
         if(count($this->images)!==0){
 
             foreach($this->images as $image){
                 //dd($image->path());
                     
-                    $newFileName = "announcements/{$this->announcement->id}";
-                    $newImage= $this->announcement->images()->create(['path'=>$image->store($newFileName, 'public')]);
+                   
+                        $newFileName = "announcements/{$this->announcement->id}";
+                        $newImage= $this->announcement->images()->create(['path'=>$image->store($newFileName, 'public')]);
 
                     //dispatch(new RemoveFace($newImage->id));
 
-                    RemoveFace::withChain([
-                        new ResizeImage($newImage->path, 300,300),
-                        new GoogleVisionSafeSearch($newImage->id),
-                        new GoogleVisionLabelImage($newImage->id),
-                    ])->dispatch($newImage->id);
-                   
-            
+                        RemoveFace::withChain([
+                            new ResizeImage($newImage->path, 300,300),
+                            new GoogleVisionSafeSearch($newImage->id),
+                            new GoogleVisionLabelImage($newImage->id),
+                        ])->dispatch($newImage->id);
+             
             }
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
