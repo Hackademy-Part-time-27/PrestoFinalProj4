@@ -9,11 +9,13 @@ use App\Jobs\RemoveFace;
 use App\Jobs\ResizeImage;
 use App\Models\Announcement;
 use App\Models\Category;
-use App\Models\Image;
 use Illuminate\Support\Facades\File;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 use Livewire\WithFileUploads;
+use Spatie\Image\Enums\AlignPosition;
+use Spatie\Image\Enums\Fit;
+use Spatie\Image\Image;
 
 class CreateAnnouncement extends Component
 { 
@@ -106,6 +108,16 @@ class CreateAnnouncement extends Component
                             new GoogleVisionSafeSearch($newImage->id),
                             new GoogleVisionLabelImage($newImage->id),
                         ])->dispatch($newImage->id);
+
+                        $srcPath= storage_path() . '/app/public/' . $newImage->path ;
+                        
+                       /* $image = Image::load($srcPath);
+                        $newImage->watermark(base_path('public/img/Senza titolo-1.png'),
+                            AlignPosition::BottomRight,
+                            width: 100,
+                            height: 60,
+                            fit: Fit::Stretch)->save();
+                        */
              
             }
             File::deleteDirectory(storage_path('/app/livewire-tmp'));

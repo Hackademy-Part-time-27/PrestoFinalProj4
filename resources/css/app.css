@@ -136,19 +136,36 @@ nav {
 
     color: var(--text-color) !important;
     background-color: var(--color-bg);
-    position: sticky !important;
+    position: fixed !important;
     width: 100%;
     top: 0px;
+    right: 0px;
     z-index: 100;
 }
 
-.nav-size {
-    min-height: 90px;
-    transition: all 0.2s ease-in;
+.navbar-nav .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0%;
 }
 
-.nav-size.scrolled {
-    min-height: 90px;
+.navbar-nav .dropdown-menu.position {
+    position: absolute;
+    top: 0% !important;
+    left: 100% !important;
+}
+
+body {
+    --nav-height: 150px;
+    padding-top: 150px;
+}
+
+body.nav-scrolled {
+    --nav-height: 90px;
+}
+
+.nav-size {
+    min-height: var(--nav-height);
     transition: all 0.2s ease-in;
 }
 
@@ -571,4 +588,15 @@ nav {
 
 .fs-c-1{
     font-size: 13px;
+}
+
+.fit-content {
+    content: normal;
+    width: 100%;
+    text-align: center;
+}
+
+.form-width{
+    min-width: min-content;
+    object-fit: contain;
 }
