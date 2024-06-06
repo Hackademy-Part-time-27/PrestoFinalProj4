@@ -22,27 +22,15 @@
                             <div class="col-12 col-sm-8 col-md-6 col-lg-4 col-xxl-3 mb-4">
                                 <div class="card-custom mx-4 my-3 card-swipe" id="card">
                                         <div class="div-img">
-<<<<<<< HEAD
                                             <img class="img-fluid rounded-1 w-100 ps-0" src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(300,300) : 'https://picsum.photos/200' }}" class="card-img-top p-3 rounded" alt="...">
-=======
-                                            <img class="img-fluid rounded-1 w-100 ps-0" src="{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()->path) : 'https://picsum.photos/200' }}" class="card-img-top p-3 rounded" alt="...">
->>>>>>> 1552fb3df4928864e847c600d259e2ac635f4e40
                                         </div>
                                         <div class="text-start pt-2 div-text-card " >
                                             <h2 class="card-title text-3 border-bttm">{{Str::limit($announcement->title, 20)}}</h2>
                                             <p class="card-text fs-4 text-danger ">{{ $announcement->category->name}} </p>
-<<<<<<< HEAD
                                             <p class="card-text fs-5 border-bttm">{{$announcement->body}}</p>
                                             <span class="text-end "><p class="card-text fs-2 text-danger pe-2 ">{{Number::currency($announcement->price, in: 'EUR', locale: 'de')}}</p></span>
                                             <p class="card-text fs-5 border-bttm text-truncate">{{$announcement->body}}</p>
                                             <span class="text-end"><p class="card-text fs-2 text-danger pe-2">{{Number::currency($announcement->price, in: 'EUR', locale: 'de')}}</p></span>                        
-=======
-
-                                            <p class="card-text fs-5 border-bttm text-truncate">{{$announcement->body}}</p>
-                                            <span class="text-end"><p class="card-text fs-2 text-danger pe-2">{{Number::currency($announcement->price, in: 'EUR', locale: 'de')}}</p></span>
-
-                                            
->>>>>>> 1552fb3df4928864e847c600d259e2ac635f4e40
                                             <div class="my-4">
                                                 <a href="{{ route('announcements.show', ['announcement' => $announcement->id]) }}" class="btn-custom text-decoration-none fs-4">{{__('ui.ads_view') }} </a>
                                             </div>

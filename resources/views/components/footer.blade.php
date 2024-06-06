@@ -26,9 +26,9 @@
                 </p>
             </div>
             <!-- Team Members -->
-            <div style="flex: 1; min-width: 300px; margin-bottom: 30px;"  class="footer-col ms-3">
-                <h4 style="font-size: 22px; color: #f8f9fa; margin-bottom: 15px;">      {{__('ui.footer_description_team') }}</h4>
-                <ul style="list-style: none; padding: 0; font-size: 16px; line-height: 1.6; color: #ced4da;">
+            <div style="flex: 1; min-width: 300px; margin-bottom: 40px;"  class="footer-col ms-3">
+                <h4 style="font-size: 22px; color: #f8f9fa; margin-bottom: 35px; margin-left: 200px">      {{__('ui.footer_description_team') }}</h4>
+                <ul style="list-style: none; padding: 0; font-size: 16px; line-height: 1.6; color: #ced4da;margin-left:190px">
                     <li>Agostino Di Bartolomeo</li>
                     <li>Riccardo Cardia</li>
                     <li>Marco Motolese</li>
@@ -37,9 +37,9 @@
             </div>
             <!-- Social Media Links -->
             <div style="flex: 1; min-width: 300px; margin-bottom: 30px;" class="footer-col">
-                <h4 style="font-size: 22px; color: #f8f9fa; margin-bottom: 15px;">      {{__('ui.footer_description_social') }}</h4>
-                <div class="social-links">
-                    <a href="#" target="_blank" style="margin-right: 10px;" class="fab fa-facebook-f">
+                <h4 style="font-size: 22px; color: #f8f9fa; margin-bottom: 15px; margin-left:80px;">      {{__('ui.footer_description_social') }}</h4>
+                <div class="social-links ">
+                    <a href="#" target="_blank" style="margin-left: 60px;" class="fab fa-facebook-f">
                       
                     </a>
                     <a href="#" target="_blank" style="margin-right: 10px; " class="fab fa-twitter">
@@ -71,9 +71,9 @@
             <div style="flex: 1; min-width: 300px; margin-bottom: 30px;">
                 <h4 style="font-size: 22px; color: #f8f9fa; margin-bottom: 15px;">{{__('ui.footer_description_legal_information') }}</h4>
                 <ul style="list-style: none; padding: 0; font-size: 16px; line-height: 1.6; color: #ced4da;">
-                    <li><a href="/privacy-policy" style="text-decoration: none;">{{__('ui.footer_description_legal_information_menu') }}</a></li>
-                    <li><a href="/termini-e-condizioni" style=" text-decoration: none;">{{__('ui.footer_description_legal_information_menu_2') }}</a></li>
-                    <li><a href="/cookie-policy" style=" text-decoration: none;">{{__('ui.footer_description_legal_information_menu_3') }}</a></li>
+                    <li><a href="{{route('viewPolicy')}}" style="text-decoration: none;">{{__('ui.footer_description_legal_information_menu') }}</a></li>
+                    <li><a href="{{route('viewPolicy')}}" style=" text-decoration: none;">{{__('ui.footer_description_legal_information_menu_2') }}</a></li>
+                    <li><a href="{{route('viewPolicy')}}" style=" text-decoration: none;">{{__('ui.footer_description_legal_information_menu_3') }}</a></li>
                 </ul>
             </div>
         </div>
