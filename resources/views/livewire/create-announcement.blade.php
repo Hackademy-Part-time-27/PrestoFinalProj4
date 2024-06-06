@@ -1,37 +1,38 @@
 <div>
-    <div class="col-md-6 mx-auto fs-4">
+    <div class="col-md-6 mx-auto fs-c-1 ">
         <div class="my-4">
-                <h1>{{__('ui.ads_create_text') }}</h1>
+                <h1 class="">{{__('ui.ads_create_text') }}</h1>
                 <x-success/>
         </div class="">
             <form wire:submit="addAnnouncement()">
                 
                     <div class="mb-3">
-                        <label class="form-label" for="title">{{__('ui.ads_title') }}</label>
+                        <label class="form-label text-3" for="title">{{__('ui.ads_title') }}</label>
                         <input wire:model.live='title' class="form-control mb-2 @error('title') is-invalid @enderror" type="text">
                         @error('title') <span class="text-danger ">{{ $message }}</span> @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="category_id" class="form-label">{{__('ui.category_name') }}</label>
-                        <select name="categoy_id" wire:model="category_id" class="form-control fs-4" >
+                        <label for="category_id" class="form-label text-3">{{__('ui.category_name') }}</label>
+                        <select name="categoy_id" wire:model="category_id" class="form-control" >
+                                <option value="">Scegli Categoria</option>
                             @foreach($categories as $category)
-                                <option class="fs-5" value="{{ $category->id }}">{{ $category->name }}</option>
+                                <option class="" value="{{ $category->id }}">{{ $category->name }}</option>
                             @endforeach
                         </select>
                         @error('category_id')  <span class="text-danger ">{{ $message }}</span> @enderror
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="body">{{__('ui.ads_description') }}</label>
+                        <label class="form-label text-3" for="body">{{__('ui.ads_description') }}</label>
                         <textarea class="form-control mb-2 @error('body') is-invalid @enderror"  wire:model.live='body'></textarea>
                         @error('body') <span class="text-danger ">{{ $message }}</span> @enderror
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="title">{{__('ui.ads_price') }}</label>
+                        <label class="form-label text-3" for="title">{{__('ui.ads_price') }}</label>
                         <input wire:model.live='price' class="form-control mb-2 @error('price') is-invalid @enderror" type="number" min="0" step="0.01";>
                         @error('price') <span class="text-danger ">{{ $message }}</span> @enderror
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="title">{{__('ui.ads_image') }}</label>
+                        <label class="form-label text-3" for="title">{{__('ui.ads_image') }}</label>
                         <input wire:model='temporary_images' class="form-control mb-2 @error('temporary_images.*') is-invalid @enderror" type="file" multiple placeholder="/Img">
                         @error('temporary_images.*') <span class="text-danger ">{{ $message }}</span> @enderror
                     </div>

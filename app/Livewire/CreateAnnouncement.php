@@ -9,11 +9,13 @@ use App\Jobs\RemoveFace;
 use App\Jobs\ResizeImage;
 use App\Models\Announcement;
 use App\Models\Category;
-use App\Models\Image;
 use Illuminate\Support\Facades\File;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 use Livewire\WithFileUploads;
+use Spatie\Image\Enums\AlignPosition;
+use Spatie\Image\Enums\Fit;
+use Spatie\Image\Image;
 
 class CreateAnnouncement extends Component
 { 
@@ -44,8 +46,8 @@ class CreateAnnouncement extends Component
             'body'=>'required|min:8',
             'price'=>'required',
             'category_id'=>'required',
-            'temporary_images.*'=>'required|max:1024',
-            'images.*' => 'required|max:1024'
+            'temporary_images.*'=>'required|max:1024|mimes:jpg,jpeg',
+            'images.*' => 'required|max:1024|mimes:jpg,jpeg'
         ];
     }
 
@@ -58,15 +60,17 @@ class CreateAnnouncement extends Component
             'body.required'=>'Il campo Descrizione è obbligatorio!',
             'price.required'=>'Il campo Prezzo è obbligatorio!',
             'temporary_images.*.image' => 'Il File dev\'essere un\'immagine',
-            'temporary_images.*.max' => 'Il File dev\'essere un\'immagine',
+            'temporary_images.*.max' => 'Il File non deve superare i :max Kbs',
+            'temporary_images.*.mimes'=>'Il file dev\'essere di tipo jpg o jpeg',
             'images.*.image' => 'Il File dev\'essere un\'immagine',
             'images.*.max' => 'Il File non deve superare i :max kBs',
+            'images.*.mimes'=>'Il file dev\'essere di tipo jpg o jpeg',
            
         ];
     }
 
     public function updatedTemporaryImages(){
-        if($this->validate(['temporary_images'=>'required|max:1024'])){
+        if($this->validate(['temporary_images.*'=>'required|max:1024|mimes:jpg,jpeg'])){
             foreach ($this->temporary_images as $photo) {
                 $this->images[]=$photo; 
             }
@@ -85,20 +89,36 @@ class CreateAnnouncement extends Component
         $announcement->user_id = $this->user_id;
        
         $announcement->save();
-      
+        
+        
+        
         if(count($this->images)!==0){
 
             foreach($this->images as $image){
                 //dd($image->path());
                     
-                    $newFileName = "announcements/{$this->announcement->id}";
-                    $newImage= $this->announcement->images()->create(['path'=>$image->store($newFileName, 'public')]);
+                   
+                        $newFileName = "announcements/{$this->announcement->id}";
+                        $newImage= $this->announcement->images()->create(['path'=>$image->store($newFileName, 'public')]);
 
-                    dispatch(new RemoveFace($newImage->id));
-                    dispatch(new ResizeImage($newImage->path, 300,300));
-                    dispatch(new GoogleVisionSafeSearch($newImage->id));
-                    dispatch(new GoogleVisionLabelImage($newImage->id));
-            
+                    //dispatch(new RemoveFace($newImage->id));
+
+                        RemoveFace::withChain([
+                            new ResizeImage($newImage->path, 300,300),
+                            new GoogleVisionSafeSearch($newImage->id),
+                            new GoogleVisionLabelImage($newImage->id),
+                        ])->dispatch($newImage->id);
+
+                        $srcPath= storage_path() . '/app/public/' . $newImage->path ;
+                        
+                       /* $image = Image::load($srcPath);
+                        $newImage->watermark(base_path('public/img/Senza titolo-1.png'),
+                            AlignPosition::BottomRight,
+                            width: 100,
+                            height: 60,
+                            fit: Fit::Stretch)->save();
+                        */
+             
             }
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }

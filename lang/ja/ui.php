@@ -55,7 +55,25 @@ return [
     'search_ads' => 'この条件では広告が見つかりません。変更して再試行してください！',
     'mail_revisor_text' => '私たちと一緒に働きましょう',
     'mail_revisor_button' => 'レビュアーになる',
-    'works_as_an_auditor' => 'レビュアーとして働く！'
+    'works_as_an_auditor' => 'レビュアーとして働く！',
+    'footer_description' => 'PRESTO.IT 速度と効率。私たちのサービスを発見し、満足しているユーザーコミュニティに参加しましょう。',
+'footer_description_team' => '私たちのチーム',
+'footer_description_social' => 'ソーシャルメディアでフォローする',
+'footer_description_navigation' => 'ナビゲーション',
+'footer_description_menu' => '私たちについて',
+'footer_description_menu_2' => 'サービス',
+'footer_description_menu_3' => 'コンタクト',
+'footer_description_menu_4' => 'ブログ',
+'footer_description_legal_information' => '法的情報',
+'footer_description_legal_information_menu' => 'プライバシーポリシー',
+'footer_description_legal_information_menu_2' => '利用規約',
+'footer_description_legal_information_menu_3' => 'クッキーポリシー',
+'footer_newsletter_text' => 'ニュースレターに登録する',
+'footer_reserved' => ' 2024 PRESTO.IT. 無断転載を禁じます。',
+'footer_button' => '登録する',
+'category_search_text' => '検索結果:',
+
+
     
     
     

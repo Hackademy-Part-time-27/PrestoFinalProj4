@@ -11,16 +11,17 @@ class FrontController extends Controller
 {
 
 
-public function welcome(){
+public function welcome()
+{
     $announcements=Announcement::where('is_accepted',true)->take(6)->orderBy('created_at', 'DESC')->get();
     
     return view('welcome',compact('announcements'));
 
 }
 
-public function categoryShow(Category $category){
+public function categoryShow(Category $category)
+{
    
-    
     return view('categoryShow',compact('category'));
 
 }
@@ -56,6 +57,10 @@ public function setLanguage($lang)
    
    session()->put('locale', $lang);
    return redirect()->back();
+}
+
+public function viewPolicy(){
+    return view ('policy.index');
 }
 
 

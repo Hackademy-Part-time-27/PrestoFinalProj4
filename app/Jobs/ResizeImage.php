@@ -7,6 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
+use Spatie\Image\Enums\AlignPosition;
 use Spatie\Image\Enums\CropPosition;
 use Spatie\Image\Enums\Fit;
 use Spatie\Image\Image;
@@ -43,6 +44,13 @@ class ResizeImage implements ShouldQueue
         
         $croppedImage= Image::load($srcPath)
         ->fit(Fit::Crop, $this->w, $this->h)
+        ->save($destPath);
+
+        $croppedImage= Image::load($srcPath)->watermark(base_path('resources/img/Senza titolo-1.png'),
+        AlignPosition::Center,
+        width: 200,
+        height: 100,
+        fit: Fit::Stretch)
         ->save($destPath);
     }
 

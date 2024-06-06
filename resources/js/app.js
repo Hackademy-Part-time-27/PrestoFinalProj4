@@ -8,14 +8,13 @@ window.addEventListener('scroll', () =>{
     
     let scroll = window.scrollY;
     var nav = document.getElementById('nav').classList;
-/*
-    if (scroll >= 80 ){
-        nav.add('scrolled');
-    }else  {
-        nav.remove('scrolled');
 
+    if (scroll >= 80 ){
+        document.body.classList.add('nav-scrolled');
+    }else  {
+        document.body.classList.remove('nav-scrolled');
     }
-*/
+
 })
 
 window.addEventListener('load', ()=> {

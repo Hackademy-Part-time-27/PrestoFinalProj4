@@ -45,3 +45,5 @@ Route::post('/lingua/{lang}', [FrontController::class, 'setLanguage'])->name('se
 
 //newsletter 
 Route::post('/register/newsLetter', [NewsLetterController::class, 'registerNewsLetter'])->name('form.newsletter')->middleware('auth');
+
+Route::get('/privacy/policy',[FrontController::class,'viewPolicy'])->name('viewPolicy');

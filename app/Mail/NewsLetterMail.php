@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\Models\Announcement;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -16,9 +17,9 @@ class NewsLetterMail extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct(public $title)
+    public function __construct(public $title,)
     {
-        //
+         //
     }
 
     /**
@@ -27,7 +28,7 @@ class NewsLetterMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Sono stati caricati 3 nuovi annunci su '. config('app.name') . '!',
+            subject: 'E\' stato caricato un nuovo annuncio ' .  $this->title . ' su '. config('app.name') . '!' 
         );
     }
 
@@ -36,8 +37,12 @@ class NewsLetterMail extends Mailable
      */
     public function content(): Content
     {
+        $announcement = Announcement::orderBy('created_at', 'desc')->first()->get();
         return new Content(
             view: 'view.newsletter',
+            with: [
+              'title' => $this->title,
+            ],
         );
     }
 
