@@ -11,12 +11,12 @@
                     @csrf
                     <div class="row g-3">
                         <div class="col-12">
-                            <label class="form-label fs-5" for="email">Email</label>
+                            <label class="form-label fs-6" for="email">Email</label>
                             <input type="email" name="email" id="email" class="form-control  mb-2 @error('email') is-invalid @enderror" value="{{ old('email') }}">
                             @error('email') <span class="small text-danger fs-6">{{ $message }}</span> @enderror
                         </div>
                         <div class="col-12">
-                            <label class="form-label fs-5" for="password">Password</label>
+                            <label class="form-label fs-6" for="password">Password</label>
                             <input type="password" name="password" id="password" class="form-control  mb-2 @error('password') is-invalid @enderror">
                             @error('password') <span class="small text-danger fs-6">{{ $message }}</span> @enderror
                         </div>

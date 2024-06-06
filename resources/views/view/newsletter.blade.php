@@ -36,6 +36,8 @@
 <body>
   <div class="contenitore">
         <h4 style="text-transform:none;">E' stato pubblicato un nuovo annuncio su {{ config('app.name') }}</h4>
+        <hr>
+        <h5>Titolo :  {{ $title }}</h5>
   </div>   
 </body>
 </html>

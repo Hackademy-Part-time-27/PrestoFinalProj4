@@ -84,6 +84,7 @@ body {
     font-style: normal;
     text-transform: uppercase;
     color: var(--text-color) !important;
+    height: auto;
 }
 
 
@@ -566,4 +567,8 @@ nav {
 .footer-col .social-links a:hover {
     color: #24262b;
     background-color: #ffffff;
+}
+
+.fs-c-1{
+    font-size: 13px;
 }

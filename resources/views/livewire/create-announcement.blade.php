@@ -1,5 +1,5 @@
 <div>
-    <div class="col-md-6 mx-auto fs-4">
+    <div class="col-md-6 mx-auto fs-c-1 ">
         <div class="my-4">
                 <h1>{{__('ui.ads_create_text') }}</h1>
                 <x-success/>
@@ -13,9 +13,10 @@
                     </div>
                     <div class="mb-3">
                         <label for="category_id" class="form-label">{{__('ui.category_name') }}</label>
-                        <select name="categoy_id" wire:model="category_id" class="form-control fs-4" >
+                        <select name="categoy_id" wire:model="category_id" class="form-control" >
+                                <option value="">Scegli Categoria</option>
                             @foreach($categories as $category)
-                                <option class="fs-5" value="{{ $category->id }}">{{ $category->name }}</option>
+                                <option class="" value="{{ $category->id }}">{{ $category->name }}</option>
                             @endforeach
                         </select>
                         @error('category_id')  <span class="text-danger ">{{ $message }}</span> @enderror
