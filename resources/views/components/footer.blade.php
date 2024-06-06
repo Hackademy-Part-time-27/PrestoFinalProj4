@@ -57,7 +57,7 @@
 
         <!-- Middle Section -->
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin-bottom: 50px; text-align: left;" class="footer-col">
-            <!-- Navigation Links -->
+            <!-- Navigation Links 
             <div style="flex: 1; min-width: 300px; margin-bottom: 30px;">
                 <h4 style="font-size: 22px; color: #f8f9fa; margin-bottom: 15px;">{{__('ui.footer_description_navigation') }}</h4>
                 <ul style="list-style: none; padding: 0; font-size: 16px; line-height: 1.6; color: #ced4da;">
@@ -66,7 +66,7 @@
                     <li><a href="/contatti" style=" text-decoration: none;">{{__('ui.footer_description_menu_3') }}</a></li>
                     <li><a href="/blog" style=" text-decoration: none;">{{__('ui.footer_description_menu_4') }}</a></li>
                 </ul>
-            </div>
+            </div>-->
             <!-- Legal Links -->
             <div style="flex: 1; min-width: 300px; margin-bottom: 30px;">
                 <h4 style="font-size: 22px; color: #f8f9fa; margin-bottom: 15px;">{{__('ui.footer_description_legal_information') }}</h4>
