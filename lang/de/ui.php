@@ -73,7 +73,7 @@ return [
 'footer_button' => ' ANMELDEN',
 'category_search_text' => ' Sie haben gesucht:',
 
-
+'choose_category' => 'Wähle die Kategorie'
 
 
 

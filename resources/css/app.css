@@ -136,11 +136,14 @@ nav {
 
     color: var(--text-color) !important;
     background-color: var(--color-bg);
+    z-index: 100;
+}
+
+#nav{
     position: fixed !important;
     width: 100%;
     top: 0px;
     right: 0px;
-    z-index: 100;
 }
 
 .navbar-nav .dropdown-menu {
@@ -599,4 +602,8 @@ nav {
 .form-width{
     min-width: min-content;
     object-fit: contain;
+}
+
+.position-links{
+    position: relative !important;
 }

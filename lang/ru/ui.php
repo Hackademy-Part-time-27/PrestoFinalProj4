@@ -73,7 +73,7 @@ return [
 'footer_button' => ' ПОДПИШИТЕСЬ',
 'category_search_text' => ' Вы искали:',
 
-    
+'choose_category' => 'Выберите категорию'    
     
 
 ];

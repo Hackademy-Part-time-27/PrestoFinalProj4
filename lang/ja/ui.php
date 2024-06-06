@@ -73,7 +73,7 @@ return [
 'footer_button' => '登録する',
 'category_search_text' => '検索結果:',
 
-
+'choose_category' => 'カテゴリーを選択'
     
     
     

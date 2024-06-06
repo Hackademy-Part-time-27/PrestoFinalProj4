@@ -73,7 +73,7 @@ return [
 'footer_button' => 'SUSCRIBIRSE',
 'category_search_text' => 'Has buscado:',
 
-
+'choose_category' =>'Selecciona la Categoría'
 
 
   

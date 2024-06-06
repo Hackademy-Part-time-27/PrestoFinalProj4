@@ -10,17 +10,17 @@
                             @csrf
                             <div class="mb-3">
                                 <label class="form-label fs-6 text-3" for="name">{{__('ui.register_name_text') }}</label>
-                                <input class="form-control  mb-2 @error('name') is-invalid @enderror" type="text" name="name" id="name">
+                                <input class="form-control  mb-2 @error('name') is-invalid @enderror" type="text" name="name" id="name" value="{{ old('name') }}" >
                                 @error('name') <span class="small text-danger fs-6">{{ $message }}</span> @enderror
                             </div>
                             <div class="mb-3">
                                 <label class="form-label fs-6 text-3" for="email">Email</label>
-                                <input class="form-control  mb-2 @error('email') is-invalid @enderror" type="email" name="email" id="email">
+                                <input class="form-control  mb-2 @error('email') is-invalid @enderror" type="email" name="email" id="email" value="{{ old('email') }}">
                                 @error('email') <span class="small text-danger fs-6">{{ $message }}</span> @enderror
                             </div>
                             <div class="mb-3">
                                 <label class="form-label fs-6 text-3" for="password">Password </label>
-                                <input class="form-control  mb-2 @error('password') is-invalid @enderror" type="password" name="password" id="password">
+                                <input class="form-control  mb-2 @error('password') is-invalid @enderror" type="password" name="password" id="password" value="{{ old('password') }}">
                                 @error('password') <span class="small text-danger fs-6">{{ $message }}</span> @enderror
                             </div>
                             <div class="mb-3">

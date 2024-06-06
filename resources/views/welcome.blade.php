@@ -42,7 +42,7 @@
                             <div class="col-12 col-sm-8 col-md-6 col-lg-4 col-xxl-3 mb-4">
                                 <div class="card-custom mx-4 my-3 card-swipe" id="card"> 
                                         <div class="div-img">
-                                            <img class="img-fluid rounded-1 w-100" src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(300,300) : 'https://picsum.photos/200' }}" class="card-img-top p-3 rounded" alt="...">
+                                            <img class="img-fluid rounded-1 w-100" src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(900,900) : 'https://picsum.photos/200' }}" class="card-img-top p-3 rounded" alt="...">
                                         </div>
                                         <div class="text-start pt-2 div-text-card " >
                                             <h2 class="card-title text-3 border-bttm">{{ Str::limit($announcement->title, 20)}}</h2>
