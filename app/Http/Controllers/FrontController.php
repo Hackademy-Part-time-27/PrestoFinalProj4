@@ -59,5 +59,9 @@ public function setLanguage($lang)
    return redirect()->back();
 }
 
+public function viewPolicy(){
+    return view ('policy.index');
+}
+
 
 }
