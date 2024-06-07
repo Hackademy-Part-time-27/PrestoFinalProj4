@@ -28,7 +28,7 @@
                 </li>
             @endif 
             @endif   
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown me-4">
                 <a class="nav-link dropdown-toggle hover " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 {{__('ui.navbar_category') }}
                 </a>
