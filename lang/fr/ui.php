@@ -73,7 +73,7 @@ return [
 'footer_button' => ' INSCRIS-TOI',
 'category_search_text' => ' Vous avez recherché:',
 
-    
+'choose_category' => 'Sélectionnez la Catégorie'    
     
     
 

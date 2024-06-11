@@ -8,20 +8,18 @@
                 </div>
             </div>
             <div class="mb-3 ">
-                <table class="w-100 fs-3">
+                <table class="w-50 fs-3">
                     <thead>
-                        <th>#</th>
                         <th>{{__('ui.category_name_text') }}</th>
                         <th></th>
                     </thead>
                     <tbody>
                         @foreach($categories as $category)
                             <tr>
-                                <td class="col">{{ $category->id }}</td>
                                 <td class="col">{{ $category->name }}</td>
                                 <td class="text-start mx-auto col">
-                                    <a href="" class="btn btn-secondary btn-sm">modifica</a>
-                                    <form class="d-inline ms-2" action="" method="POST">
+                                    <a href="{{ route('category.edit', $category)}}" class="btn btn-secondary btn-sm">modifica</a>
+                                    <form class="d-inline ms-2" action="{{ route('category.destroy', $category) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger btn-sm">{{__('ui.category_delete') }}</button>

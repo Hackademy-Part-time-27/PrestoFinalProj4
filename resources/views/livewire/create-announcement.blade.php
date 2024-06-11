@@ -14,7 +14,7 @@
                     <div class="mb-3">
                         <label for="category_id" class="form-label text-3">{{__('ui.category_name') }}</label>
                         <select name="categoy_id" wire:model="category_id" class="form-control" >
-                                <option value="">Scegli Categoria</option>
+                                <option value="">{{ __('ui.choose_category') }}</option>
                             @foreach($categories as $category)
                                 <option class="" value="{{ $category->id }}">{{ $category->name }}</option>
                             @endforeach

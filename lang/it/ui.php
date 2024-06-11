@@ -75,7 +75,7 @@ return [
     'footer_button' => ' ISCRIVITI', 
     'category_search_text' => ' Hai cercato:', 
 
-
+    'choose_category' => 'Scegli la Categoria'
 
 
 

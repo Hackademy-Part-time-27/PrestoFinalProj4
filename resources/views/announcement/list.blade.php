@@ -1,4 +1,5 @@
 <x-layout>
+    
     <div class="row bg-2 m-0 py-4 w-100">
         <div class="col-md-8 mx-auto py-4 " >  
                 <h1 class="text-3">{{__('ui.welcome') }} </h1>
@@ -22,13 +23,11 @@
                             <div class="col-12 col-sm-8 col-md-6 col-lg-4 col-xxl-3 mb-4">
                                 <div class="card-custom mx-4 my-3 card-swipe" id="card">
                                         <div class="div-img">
-                                            <img class="img-fluid rounded-1 w-100 ps-0" src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(300,300) : 'https://picsum.photos/200' }}" class="card-img-top p-3 rounded" alt="...">
+                                            <img  class="img-fluid rounded-1 w-100 ps-0" src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(900,900) : 'https://picsum.photos/200' }}" class="card-img-top p-3 rounded" alt="...">
                                         </div>
                                         <div class="text-start pt-2 div-text-card " >
                                             <h2 class="card-title text-3 border-bttm">{{Str::limit($announcement->title, 20)}}</h2>
                                             <p class="card-text fs-4 text-danger ">{{ $announcement->category->name}} </p>
-                                            <p class="card-text fs-5 border-bttm">{{$announcement->body}}</p>
-                                            <span class="text-end "><p class="card-text fs-2 text-danger pe-2 ">{{Number::currency($announcement->price, in: 'EUR', locale: 'de')}}</p></span>
                                             <p class="card-text fs-5 border-bttm text-truncate">{{$announcement->body}}</p>
                                             <span class="text-end"><p class="card-text fs-2 text-danger pe-2">{{Number::currency($announcement->price, in: 'EUR', locale: 'de')}}</p></span>                        
                                             <div class="my-4">
@@ -49,14 +48,16 @@
                         @endforelse
                     </div>
                 </div>
-                <div class="row justify-content-center mt-4">
-                    <div class="col-lg-4 mt-5">
-                    {{ $announcements->links() }}
-                    </div>
-                </div>
+               
+            </div>
+        </div>
+        <div class="row justify-content-center mt-4">
+            <div class="col-lg-4 mt-5 ">
+            <span class="position-links"> {{ $announcements->links() }} </span>
             </div>
         </div>
     </div>
+  
 
 </x-layout>
 

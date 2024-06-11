@@ -73,7 +73,7 @@ return [
 'footer_button' => ' INSCREVA-SE',
 'category_search_text' => ' Você procurou:',
 
-    
+'choose_category' => 'Selecione a Categoria'   
     
     
 

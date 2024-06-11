@@ -74,7 +74,7 @@ return [
 'footer_button' => 'SUBSCRIBE',
 'category_search_text' => 'You searched for:',
 
-
+'choose_category' => 'Select the Category',
 
     
 ];
